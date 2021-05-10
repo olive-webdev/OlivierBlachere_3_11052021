@@ -1,0 +1,213 @@
+@import "../utils/variables";
+@import "../vendors/minireset";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
+@import "../utils/mixins";
+
+
+
+.hide{
+    visibility: hidden;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+h2{
+    font-weight: 700;
+    font-size: 1.5rem;
+    align-self: flex-start;
+    margin-left: 6vw;
+}
+
+.header{
+    height: 63px;
+    padding-top: 0.4rem;
+    @include flex;
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.9rem;
+}
+
+.localization{
+    height: 50px;
+    @include flex;
+    background-color: darken($grey, 10%);
+    box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.358) inset;
+    &--gps{
+        position: relative;
+        left: -1.2rem;
+    }
+}
+
+.reserve{
+    width: 100vw;
+    min-height: 200px;
+    max-height: 287px;
+    @include flex;
+    flex-direction: column;
+    justify-content: stretch;
+    background-color: $grey;
+        h2{
+            text-align: center;
+            margin: 2rem auto 1rem auto;
+        }
+        p{  
+            font-weight: 300;
+            font-size: 1.1rem;
+            text-align: center;
+            color: #787878;
+        }
+        &--btn{
+            @include flex;
+            @include shadow(40%);
+            &--explorer {
+                border-radius: 30px;
+                width: 220px;
+                height: 50px;
+                background-image:linear-gradient(-5deg, $primary 30%, $primary 0%, $secondary);
+                color: white;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+            }
+        }
+}
+
+.functioning{
+    @include flex;
+    flex-direction: column;
+    justify-content:space-between;
+    height: 440px;
+    padding-top: 3rem;
+    padding-bottom: 4.5rem;
+        &--items{
+            width: 85vw;
+            max-width: 325px;
+            height: 75px;
+            background-color: $grey;
+            @include flex;
+            @include shadow;
+            border-radius: 1.5rem;
+            font-size: 1rem;
+            position: relative;
+                    &--icon{
+                        position: absolute;
+                        left: 2.5rem;
+                        color: darken($grey, 60%);
+                    }
+                
+                    p{
+                        position: absolute;
+                        left: 5rem;
+                    }
+                
+                    .number{
+                        position: absolute;
+                        @include flex;
+                        width: 24px;
+                        height: 24px;
+                        background-color: $primary;
+                        border-radius: 50%;
+                        left: -12px;
+                        color:white;
+                    }
+        }
+    @include functioning--itemshover;
+}
+
+.restaurants{
+    @include flex;
+    background-color: $grey;
+    flex-direction: column;
+    justify-content:space-between;
+    gap: 1.5rem;
+    height: 1225px;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+    :nth-child(3){
+        img{
+        position: absolute;
+        bottom: -15px;
+        }}
+}
+
+.restaurant{
+    @include flex;
+    @include shadow;
+    flex-direction: column;
+    width: 90vw;
+    max-width: 335px;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 1rem 1rem 1rem 1rem ;
+                img{
+                    position: absolute;
+                    bottom: 75px;
+                }
+                .new{
+                    position: absolute;
+                    display: inline;
+                    background-color: $tertiary;
+                    padding: .4rem .7rem;
+                    right: .8rem;
+                    top: 1rem;
+                    font-size: .9rem;
+                    font-weight: 500;
+                    color: #579384;
+                    border-radius: .1rem;
+                }
+    .titre{
+        background-color: white;
+        @include flex;
+        width: 100%;
+        height: 75px;
+        padding: 1rem 1rem;
+        justify-content: space-between;
+        position: absolute;
+        top: 175px;
+            .nomlieu{
+                h3{
+                    font-weight: 700;
+                    font-size: 1.1rem;
+                }
+                h4{
+                    margin-top: .2rem;
+                    font-weight: 300;
+                    font-size: 1rem;
+                }
+            }
+            .heart{
+                @include flex;
+                width: 32px;
+                height: 32px;
+                position: absolute;
+                bottom: 1.5rem;
+                right: 1rem;
+                fill: white;
+                stroke: rgb(0, 0, 0);
+                stroke-width:20;                
+
+                &:hover{
+                    stroke: none;
+                    fill: url(#gradient) black;
+                }
+            }
+    }
+}
+
+footer{
+    background-color: darken($grey, 75%);
+    height: 200px;
+    color: white;
+    padding: 1.5rem 7vw;
+    line-height: 1.6rem;
+        .logo{
+            font-family: 'Shrikhand',sans-serif;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .fas{
+            font-size: .8rem;
+            width: 1rem;
+            margin-right: .5rem;
+        }
+}

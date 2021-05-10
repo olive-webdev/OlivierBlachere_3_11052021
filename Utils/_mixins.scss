@@ -1,0 +1,16 @@
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin shadow($percent: 15%) {
+    box-shadow: 0px 1px 8px 0px darken($grey, $percent);
+}
+
+@mixin functioning--itemshover {
+    .functioning--items:hover{
+        background-color: lighten($primary,35%);
+        .fas{color: $primary;}
+    }
+}
