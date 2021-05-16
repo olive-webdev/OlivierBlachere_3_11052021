@@ -3,8 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
 @import "../utils/mixins";
 
-
-
 .hide{
     visibility: hidden;
 }
@@ -12,7 +10,6 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
-
 
 .wrapper{
     width: 100%;
@@ -26,7 +23,7 @@ body{
     justify-content: center;
     align-items: center;
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.742);
+    background-color: #8e8e8e6b;
     animation: loading 3s;
     animation-fill-mode: forwards;
     visibility: visible;
@@ -72,10 +69,6 @@ body{
       transform: translateY(100px);
     }
   }
-  
-
-
-
 
 h2{
     font-weight: 700;
@@ -119,7 +112,7 @@ h2{
             font-weight: 300;
             font-size: 1.1rem;
             text-align: center;
-            color: #787878;
+            color: darken($grey, 50);
         }
         &--btn{
             @include flex;
@@ -217,7 +210,7 @@ h2{
                     top: 1rem;
                     font-size: .9rem;
                     font-weight: 500;
-                    color: #579384;
+                    color: darken($tertiary, 25);
                     border-radius: .1rem;
                 }
                 &--title{
