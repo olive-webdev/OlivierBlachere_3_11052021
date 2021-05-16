@@ -1,10 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
-#gradient {
-  --color-stop-1: #FF79DA;
-  --color-stop-2: #9356DC;
-}
-
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -197,7 +192,7 @@ h2 {
   bottom: -15px;
 }
 
-.restaurant {
+.restaurant-card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,11 +205,11 @@ h2 {
   position: relative;
   border-radius: 1rem 1rem 1rem 1rem;
 }
-.restaurant img {
+.restaurant-card img {
   position: absolute;
   bottom: 75px;
 }
-.restaurant .new {
+.restaurant-card--new {
   position: absolute;
   display: inline;
   background-color: #99E2D0;
@@ -226,7 +221,7 @@ h2 {
   color: #579384;
   border-radius: 0.1rem;
 }
-.restaurant .titre {
+.restaurant-card--title {
   background-color: white;
   display: flex;
   justify-content: center;
@@ -238,33 +233,52 @@ h2 {
   position: absolute;
   top: 175px;
 }
-.restaurant .titre .nomlieu h3 {
+.restaurant-card--title--nameloca h3 {
   font-weight: 700;
   font-size: 1.1rem;
 }
-.restaurant .titre .nomlieu h4 {
+.restaurant-card--title--nameloca h4 {
   margin-top: 0.2rem;
   font-weight: 300;
   font-size: 1rem;
 }
-.restaurant .titre .heart {
+.restaurant-card--title--heart {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 32px;
   height: 32px;
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 2rem;
   right: 1rem;
-  fill: white;
-  stroke: black;
-  stroke-width: 20;
 }
-.restaurant .titre .heart:hover {
-  stroke: none;
-  fill: url(#gradient) black;
+.restaurant-card--title--heart .fas {
+  font-size: 1.5rem;
+  -webkit-text-stroke: 0.15rem black;
+  color: white;
+}
+.restaurant-card--title--heart .fas:hover {
+  background: linear-gradient(180deg, #FF79DA, #9356DC) 0% 50%;
+  background-clip: text;
+  -webkit-text-stroke: 0 black;
+  color: transparent;
+  animation: fontgradient 0.6s 1 alternate;
 }
 
+@keyframes fontgradient {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.3);
+  }
+  70% {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 footer {
   background-color: #373737;
   height: 200px;

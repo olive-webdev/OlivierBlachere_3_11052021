@@ -129,7 +129,7 @@ h2{
         }}
 }
 
-.restaurant{
+.restaurant-card{
     @include flex;
     @include shadow;
     flex-direction: column;
@@ -143,7 +143,7 @@ h2{
                     position: absolute;
                     bottom: 75px;
                 }
-                .new{
+                &--new{
                     position: absolute;
                     display: inline;
                     background-color: $tertiary;
@@ -155,44 +155,64 @@ h2{
                     color: #579384;
                     border-radius: .1rem;
                 }
-    .titre{
-        background-color: white;
-        @include flex;
-        width: 100%;
-        height: 75px;
-        padding: 1rem 1rem;
-        justify-content: space-between;
-        position: absolute;
-        top: 175px;
-            .nomlieu{
-                h3{
-                    font-weight: 700;
-                    font-size: 1.1rem;
+                &--title{
+                    background-color: white;
+                    @include flex;
+                    width: 100%;
+                    height: 75px;
+                    padding: 1rem 1rem;
+                    justify-content: space-between;
+                    position: absolute;
+                    top: 175px;
+                        &--nameloca{
+                            h3{
+                                font-weight: 700;
+                                font-size: 1.1rem;
+                            }
+                            h4{
+                                margin-top: .2rem;
+                                font-weight: 300;
+                                font-size: 1rem;
+                            }
+                        }
+                        &--heart{
+                            @include flex;
+                            width: 32px;
+                            height: 32px;
+                            position: absolute;
+                            bottom: 2rem;
+                            right: 1rem;
+                            .fas {
+                                font-size: 1.5rem;
+                                -webkit-text-stroke: .15rem black;
+                                color: white;
+                                }
+                                
+                            .fas:hover {
+                                background: linear-gradient(180deg, #FF79DA, #9356DC) 0% 50%;
+                                background-clip: text;
+                                -webkit-text-stroke: 0 black;
+                                color: transparent;
+                                animation: fontgradient .6s 1 alternate;  
+                                }
+                        }
                 }
-                h4{
-                    margin-top: .2rem;
-                    font-weight: 300;
-                    font-size: 1rem;
-                }
-            }
-            .heart{
-                @include flex;
-                width: 32px;
-                height: 32px;
-                position: absolute;
-                bottom: 1.5rem;
-                right: 1rem;
-                fill: white;
-                stroke: rgb(0, 0, 0);
-                stroke-width:20;                
-
-                &:hover{
-                    stroke: none;
-                    fill: url(#gradient) black;
-                }
-            }
-    }
 }
+
+@keyframes fontgradient { 
+    0% {
+     transform:scale(1)
+    }
+    40% {
+     transform:scale(1.3)
+    }
+    70% {
+     transform:scale(.8)
+    }
+    to {
+     transform:scale(1)
+    }
+   }  
 
 footer{
     background-color: darken($grey, 75%);
