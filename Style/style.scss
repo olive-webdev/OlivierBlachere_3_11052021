@@ -1,7 +1,7 @@
-@import "../utils/variables";
-@import "../vendors/minireset";
+@import "../utils/_variables.scss";
+@import "../vendors/_minireset.scss";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
-@import "../utils/mixins";
+@import "../utils/_mixins.scss";
 
 .hide{
     visibility: hidden;
@@ -23,8 +23,8 @@ body{
     justify-content: center;
     align-items: center;
     z-index: 10;
-    background-color: #8e8e8e6b;
-    animation: loading 3s;
+    background-color: #0000009e;
+    animation: loading 4s;
     animation-fill-mode: forwards;
     visibility: visible;
 }
@@ -40,9 +40,9 @@ body{
     height: 50px;
     border-radius: 100%;
     margin: 0px 20px 50px 20px;
-  }
+}
   
-  .loader div:nth-child(1){
+.loader div:nth-child(1){
     background-color: $primary;
     animation: anim 500ms ease-in-out infinite;
     -webkit-animation: anim 1000ms ease-in-out infinite;
@@ -54,13 +54,13 @@ body{
     -webkit-animation: anim 1000ms ease-in-out 0.33s infinite;
 }
   
-  .loader div:nth-child(3){
+.loader div:nth-child(3){
     background-color: $tertiary;
     animation: anim 500ms ease-in-out 0.66s infinite;
     -webkit-animation: anim 1000ms ease-in-out 0.66s infinite;
 }
   
-  @keyframes anim{
+@keyframes anim{
     0%{
       transform: translateY(0px);
     }
@@ -68,7 +68,7 @@ body{
     50%{
       transform: translateY(100px);
     }
-  }
+}
 
 h2{
     font-weight: 700;
@@ -184,7 +184,8 @@ h2{
         img{
         position: absolute;
         bottom: -15px;
-        }}
+        }
+    }
 }
 
 .restaurant-card{
@@ -252,26 +253,44 @@ h2{
                                 background-clip: text;
                                 -webkit-text-stroke: 0 black;
                                 color: transparent;
-                                animation: fontgradient .6s 1 alternate;  
+                                animation: gradient .6s 1 alternate;
+                                -webkit-animation: gradient .6s 1 alternate;
                                 }
                         }
                 }
 }
 
-@keyframes fontgradient { 
+@keyframes gradient { 
     0% {
-     transform:scale(1)
+     transform:scale(1)    ;
+     -webkit-transform:scale(1);
+     -moz-transform:scale(1);
+     -ms-transform:scale(1);
+     -o-transform:scale(1);
     }
     40% {
-     transform:scale(1.3)
+     transform:scale(1.3)    ;
+     -webkit-transform:scale(1.3);
+     -moz-transform:scale(1.3);
+     -ms-transform:scale(1.3);
+     -o-transform:scale(1.3);
     }
     70% {
-     transform:scale(.8)
+     transform:scale(.8)    ;
+     -webkit-transform:scale(.8);
+     -moz-transform:scale(.8);
+     -ms-transform:scale(.8);
+     -o-transform:scale(.8);
     }
     to {
-     transform:scale(1)
+     transform:scale(1)    ;
+     -webkit-transform:scale(1);
+     -moz-transform:scale(1);
+     -ms-transform:scale(1);
+     -o-transform:scale(1);
     }
-   }  
+}  
+
 
 footer{
     background-color: darken($grey, 75%);
