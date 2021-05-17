@@ -11,63 +11,102 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
-.wrapper{
+  
+.wrapper {
+    background-color: rgba(46, 46, 46, 0.666);
     width: 100%;
     height: 100vh;
-    background: rgba( 111, 111, 203, 0.30 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 8.0px );
     -webkit-backdrop-filter: blur( 8.0px );
     position:fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 10;
-    background-color: #0000009e;
+    @include flex;
     animation: loading 4s;
     animation-fill-mode: forwards;
     visibility: visible;
+}
+  
+.loader {
+    position: absolute;
+    top: calc(50% - 74px);
+    left: calc(50% - 64px);
+    width: 128px;
+    height: 128px;
+}
+  
+.inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+  
+.inner.one {
+    left: 0;
+    top: 0;
+    animation: rotate-primary 1s linear infinite;
+    border-bottom: 8px solid $primary;
+    -webkit-animation: rotate-primary 1s linear infinite;
+}
+  
+.inner.two {
+    right: 0;
+    top: 0;
+    animation: rotate-secondary 1s linear infinite;
+    border-right: 8px solid $secondary;
+    -webkit-animation: rotate-secondary 1s linear infinite;
+}
+  
+.inner.three {
+    right: 0;
+    bottom: 0;
+    animation: rotate-tertiary 1s linear infinite;
+    border-top: 8px solid $tertiary;
+    -webkit-animation: rotate-tertiary 1s linear infinite;
+}
+  
+@keyframes rotate-primary {
+    0% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+  }
+  
+@keyframes rotate-secondary {
+    0% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+  }
+  
+@keyframes rotate-tertiary {
+    0% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    }
+  }
+  
+.loading{
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    top: calc(50% + 94px);
+    letter-spacing: 4px;
 }
 
 @keyframes loading{
     85%{opacity: 1;}
     100%{visibility: hidden;opacity: 0;}
-}
-
-.loader div{
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    margin: 0px 20px 50px 20px;
-}
-  
-.loader div:nth-child(1){
-    background-color: $primary;
-    animation: anim 500ms ease-in-out infinite;
-    -webkit-animation: anim 1000ms ease-in-out infinite;
-}
-  
-  .loader div:nth-child(2){
-    background-color: $secondary;
-    animation: anim 500ms ease-in-out 0.33s infinite;
-    -webkit-animation: anim 1000ms ease-in-out 0.33s infinite;
-}
-  
-.loader div:nth-child(3){
-    background-color: $tertiary;
-    animation: anim 500ms ease-in-out 0.66s infinite;
-    -webkit-animation: anim 1000ms ease-in-out 0.66s infinite;
-}
-  
-@keyframes anim{
-    0%{
-      transform: translateY(0px);
-    }
-  
-    50%{
-      transform: translateY(100px);
-    }
 }
 
 h2{
@@ -83,6 +122,15 @@ h2{
     @include flex;
     font-family: 'Shrikhand', cursive;
     font-size: 1.9rem;
+    position: relative;
+    .fas{
+        font-size: 1.2rem;
+        line-height: 63px;
+        position: absolute;
+        top: 0;
+        left: 1.4rem;
+
+    }
 }
 
 .localization{
@@ -128,6 +176,167 @@ h2{
             }
         }
 }
+.photo{
+    height: 270px;
+    background-image: url(../Images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-size: 110% ;
+    background-position: center;
+    position: relative;
+    &--header{
+        height: 50px;
+        background-color: $grey;
+        border-radius: 40px 40px 0 0 ;
+        -webkit-border-radius: 40px 40px 0 0 ;
+        -moz-border-radius: 40px 40px 0 0 ;
+        -ms-border-radius: 40px 40px 0 0 ;
+        -o-border-radius: 40px 40px 0 0 ;
+        position: relative;
+        bottom: 50px;
+}
+}
+.menu{
+    height: 1160px;
+    @include flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    background-color: $grey;
+    padding: 0 3vw;
+    margin-top: -50px;
+
+    &--btn{
+
+        @include flex;
+        @include shadow(40%);
+        &--explorer {
+
+            border-radius: 30px;
+            width: 220px;
+            height: 50px;
+            background-image:linear-gradient(-5deg, $primary 30%, $primary 0%, $secondary);
+            color: white;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &--name{
+        > h2{
+            font-family: 'Shrikhand', cursive;
+            font-size: 1.7rem;
+            margin-top: -2rem;
+        }
+        &--heart{
+            @include heart;
+        }   
+    }
+
+    &--card{
+    @include flex;
+    @include shadow;
+    position: relative;
+    justify-content: space-between;
+    height: 70px;
+    width: 94vw;
+    margin-top: .9rem;
+    background-color: white;
+    border-radius: .8rem;
+    -webkit-border-radius: .8rem;
+    -moz-border-radius: .8rem;
+    -ms-border-radius: .8rem;
+    -o-border-radius: .8rem;
+    overflow: hidden;
+    &--title{
+        white-space: nowrap; 
+        overflow:hidden;
+        text-overflow: ellipsis;
+        width: calc(100% - 70px);
+        margin-left: .8rem;
+        line-height: 1.5rem;
+        font-weight: 300;
+        &--bold{
+            white-space: nowrap; 
+            overflow:hidden;
+            text-overflow: ellipsis;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        &--light{
+            white-space: nowrap; 
+            overflow:hidden;
+            text-overflow: ellipsis;
+            font-weight: 300;
+        }
+    }
+    &--price{
+        align-self: flex-end;
+        position: absolute;
+        font-weight: 500;
+        right: 1.2rem;
+        margin-bottom: .7rem;
+    }
+    &--validate{
+        @include flex;
+        position: absolute;
+        width: 60px;
+        height: 100%;
+        right: -60px;
+        background-color: $tertiary;
+        .fas{
+            width: 20px;
+            height: 20px;
+            font-size: .8rem;
+            background-color: white;
+            border-radius: 50%;
+            @include flex;
+            color: $tertiary;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+}
+    }
+    &:hover{
+        .menu--card--validate, .menu--card--price{
+            animation: translate 1s;
+            animation-fill-mode: forwards;
+}
+        .menu--card--title{
+            animation: resize .9s;
+            animation-fill-mode: forwards;
+}
+        .fas{
+            animation: rotatecheck 1s;
+
+}
+    }
+    
+}
+}
+
+@keyframes translate{
+    from { transform:translateX(0) ; -webkit-transform:translateX(0) ; -moz-transform:translateX(0) ; -ms-transform:translateX(0) ; -o-transform:translateX(0) ; }
+    to { transform:translateX(-60px) ; -webkit-transform:translateX(-60px) ; -moz-transform:translateX(-60px) ; -ms-transform:translateX(-60px) ; -o-transform:translateX(-60px) ; }
+}
+
+@keyframes resize{
+    from{width: 100%;}
+    to{width: calc(100% - 130px);}
+}
+
+@keyframes rotatecheck{
+    from{rotate: 0deg;}
+    to{rotate: 360deg;}
+}
+
+.heading{
+    text-transform: uppercase;
+    border-bottom: 2px solid $tertiary;
+    width: 40px;
+    margin-top: 1.8rem;
+    line-height: 1.6rem;
+}
+
 
 .functioning{
     @include flex;
@@ -235,27 +444,8 @@ h2{
                             }
                         }
                         &--heart{
-                            @include flex;
-                            width: 32px;
-                            height: 32px;
-                            position: absolute;
-                            bottom: 2rem;
-                            right: 1rem;
-                            .fas {
-                                font-size: 1.5rem;
-                                -webkit-text-stroke: .15rem black;
-                                color: white;
-                                }
-                                
-                            .fas:hover {
-                                background: linear-gradient(180deg, #FF79DA, #9356DC) 0% 50%;
-                                -webkit-background-clip: text;
-                                background-clip: text;
-                                -webkit-text-stroke: 0 black;
-                                color: transparent;
-                                animation: gradient .6s 1 alternate;
-                                -webkit-animation: gradient .6s 1 alternate;
-                                }
+                            margin-top: 1rem;
+                            @include heart;
                         }
                 }
 }
@@ -307,5 +497,8 @@ footer{
             font-size: .8rem;
             width: 1rem;
             margin-right: .5rem;
+        }
+        .contact{
+            color: white;
         }
 }

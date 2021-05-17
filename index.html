@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OhMyFood</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="./Style/style.css">
 </head>
 <body>
     <div class="wrapper">
         <div class="loader">
-            <div></div>
-            <div></div>
-            <div></div>
+            <div class="inner one"></div>
+            <div class="inner two"></div>
+            <div class="inner three"></div>
           </div>
+          <div class="loading">CHARGEMENT</div>
     </div>
 
     <header>
@@ -49,7 +50,7 @@
         <div id="restaurants" class="restaurants">
             <h2>Restaurants</h2>
 
-            <a href="palette.html">
+            <a href="./Pages/palette.html">
             <div class="restaurant-card">
                     <img src="./Images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
                     <div class="restaurant-card--new">Nouveau</div>
@@ -114,7 +115,7 @@
                 <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
                 <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
                 <li>Mentions légales</li>
-                <li>Contact</li>
+                <a href="mailto:contact@ohmyfood.Fr?subject=Mail from Website"><li class="contact">Contact</li></a>
             </ul>
     </footer>
 </body>

@@ -14,3 +14,27 @@
         .fas{color: $primary;}
     }
 }
+
+@mixin heart {
+    @include flex;
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            top: 0rem;
+            right: 1rem;
+            .fas {
+                font-size: 1.5rem;
+                -webkit-text-stroke: .1rem black;
+                color: white;
+                }
+                
+            .fas:hover {
+                background: linear-gradient(180deg, #FF79DA, #9356DC) 0% 50%;
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-stroke: 0 black;
+                color: transparent;
+                animation: gradient .6s 1 alternate;
+                -webkit-animation: gradient .6s 1 alternate;
+                }
+}
