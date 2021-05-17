@@ -259,6 +259,7 @@ h2{
     }
 
     &--card{
+    opacity: 0;
     @include flex;
     @include shadow;
     position: relative;
@@ -321,11 +322,11 @@ h2{
     }
     &:hover{
         .menu--card--validate, .menu--card--price{
-            animation: translate 1s;
+            animation: translate .8s;
             animation-fill-mode: forwards;
 }
         .menu--card--title{
-            animation: resize .9s;
+            animation: resize .7s;
             animation-fill-mode: forwards;
 }
         .fas{
@@ -335,6 +336,66 @@ h2{
     }
     
 }
+
+
+&--card:nth-child(4){
+    animation: appear 2s 0s;
+    animation-fill-mode: forwards;
+}
+&--card:nth-child(5){
+    animation: appear 2s .3s;
+    animation-fill-mode: forwards;
+}
+&--card:nth-child(6){
+    animation: appear 2s .6s;
+    animation-fill-mode: forwards;
+}
+
+&--card:nth-child(8){
+    animation: appear 2s .9s;
+    animation-fill-mode: forwards;
+}
+&--card:nth-child(9){
+    animation: appear 2s 1.2s;
+    animation-fill-mode: forwards;
+}
+&--card:nth-child(10){
+    animation: appear 2s 1.5s;
+    animation-fill-mode: forwards;
+}
+
+&--card:nth-child(12){
+    animation: appear 2s 1.8s;
+    animation-fill-mode: forwards;
+}
+&--card:nth-child(13){
+    animation: appear 2s 2.1s;
+    animation-fill-mode: forwards;
+}
+&--card:nth-child(14){
+    animation: appear 2s 2.4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+    from{
+        transform: translateY(10px);
+        -webkit-transform: translateY(10px);
+        -moz-transform: translateY(10px);
+        -ms-transform: translateY(10px);
+        -o-transform: translateY(10px);
+        opacity: 0;
+}
+    to{
+        transform: translate(0);
+        -webkit-transform: translate(0);
+        -moz-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+        opacity: 1;
+}
+}
+
 }
 
 @keyframes translate{
