@@ -15,6 +15,9 @@
     }
 }
 
+
+
+
 @mixin heart {
     @include flex;
             width: 32px;
@@ -34,7 +37,7 @@
                 background-clip: text;
                 -webkit-text-stroke: 0 black;
                 color: transparent;
-                animation: gradient .6s 1 alternate;
-                -webkit-animation: gradient .6s 1 alternate;
+                animation-fill-mode: forwards;
+                animation: gradient .6s;
                 }
 }
