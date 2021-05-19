@@ -302,7 +302,7 @@ h2{
     height: 50px;
     @include flex;
     position: relative;
-    background-color: darken($grey, 10%);
+    background-color: darken($grey, 6%);
     box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.358) inset;
     &--gps{
         position: relative;
@@ -312,15 +312,13 @@ h2{
 
 .reserve{
     width: 100vw;
-    min-height: 200px;
-    max-height: 287px;
     @include flex;
     flex-direction: column;
     justify-content: stretch;
     background-color: $grey;
         h2{
             text-align: center;
-            margin: 2rem auto 1rem auto;
+            margin: 2.3rem 3rem .8rem 3rem;
         }
         p{  
             font-weight: 300;
@@ -338,7 +336,7 @@ h2{
                 background-image:linear-gradient(-5deg, $primary 30%, $primary 0%, $secondary);
                 color: white;
                 margin-top: 2rem;
-                margin-bottom: 2rem;
+                margin-bottom: 3.3rem;
             }
         }
         &--btn:hover{
@@ -520,16 +518,20 @@ h2{
     @include flex;
     flex-direction: column;
     justify-content:space-between;
-    height: 440px;
     padding-top: 3rem;
-    padding-bottom: 4.5rem;
+    padding-bottom: 4.3rem;
+    gap: 1.6rem;
+    >h2{
+        margin-bottom: .2rem;
+    }
         &--items{
-            width: 85vw;
+            width: 90vw;
+            margin-left: 12px;;
             max-width: 325px;
-            height: 75px;
+            height: 72px;
             background-color: $grey;
             @include flex;
-            @include shadow;
+            @include shadow(20%);
             border-radius: 1.5rem;
             font-size: 1rem;
             position: relative;
@@ -547,6 +549,7 @@ h2{
                     .number{
                         position: absolute;
                         @include flex;
+                        font-size: .8rem;
                         width: 24px;
                         height: 24px;
                         background-color: $primary;
@@ -561,11 +564,12 @@ h2{
 .restaurants{
     @include flex;
     background-color: $grey;
-    flex-direction: column;
-    justify-content:space-between;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
     gap: 1.5rem;
-    height: 1225px;
-    padding-top: 3rem;
+
+    padding-top: 3.2rem;
     padding-bottom: 4rem;
     :nth-child(3){
         img{
@@ -573,14 +577,18 @@ h2{
         bottom: -15px;
         }
     }
+    &--title{
+        @include flex;
+        width: 100%;
+        justify-content: left;
+    }
 }
 
 .restaurants--card{
     @include flex;
     @include shadow;
     flex-direction: column;
-    width: 90vw;
-    max-width: 335px;
+    width: 335px;
     height: 250px;
     overflow: hidden;
     position: relative;
@@ -595,10 +603,10 @@ h2{
                     background-color: $tertiary;
                     padding: .4rem .7rem;
                     right: .8rem;
-                    top: 1rem;
+                    top: .8rem;
                     font-size: .9rem;
                     font-weight: 500;
-                    color: darken($tertiary, 25);
+                    color: darken($tertiary, 40);
                     border-radius: .1rem;
                 }
                 &--title{
@@ -643,7 +651,7 @@ footer{
         .logo{
             font-family: 'Shrikhand',sans-serif;
             font-size: 1rem;
-            margin-bottom: 1rem;
+            margin-bottom: .9rem;
         }
         .fas{
             font-size: .8rem;
