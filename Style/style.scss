@@ -345,10 +345,21 @@ h2{
             @include shadow(70%);
         }
 }
+
 .photo{
-    height: 270px;
-    background-image: url(../Images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-    background-size: 110% ;
+    @each $name, $image in $restaurant {
+        &--#{$name} {
+        height: 270px;
+        background-size: 110%;
+        background-image: url('../Images/restaurants/#{$image}.jpg');
+        }
+    }
+}
+.photo--note{
+    background-position:  0;
+}
+.photo{
+
     background-position: center;
     position: relative;
     &--header{
@@ -488,10 +499,6 @@ h2{
             }
     
 }
-
-    &--card:hover{
-        @include shadow(30%);
-    }
 
 @for $i from 3 through 14 {
     &--card:nth-of-type(#{$i}) {
