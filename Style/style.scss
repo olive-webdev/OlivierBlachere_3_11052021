@@ -7,123 +7,131 @@
 
 @keyframes loading {
     85% {
-      opacity: 1;
+        opacity: 1;
     }
+
     100% {
-      visibility: hidden;
-      opacity: 0;
+        visibility: hidden;
+        opacity: 0;
     }
-    }
+}
 
 @keyframes rotate-primary {
     0% {
-      transform: rotateX(30deg) rotateY(-50deg) rotateZ(0deg);
-      -webkit-transform: rotateX(30deg) rotateY(-50deg) rotateZ(0deg);
-      -moz-transform: rotateX(30deg) rotateY(-50deg) rotateZ(0deg);
-      -ms-transform: rotateX(30deg) rotateY(-50deg) rotateZ(0deg);
-      -o-transform: rotateX(30deg) rotateY(-50deg) rotateZ(0deg);
-}
-    100% {
-      transform: rotateX(30deg) rotateY(-50deg) rotateZ(360deg);
-      -webkit-transform: rotateX(30deg) rotateY(-50deg) rotateZ(360deg);
-      -moz-transform: rotateX(30deg) rotateY(-50deg) rotateZ(360deg);
-      -ms-transform: rotateX(30deg) rotateY(-50deg) rotateZ(360deg);
-      -o-transform: rotateX(30deg) rotateY(-50deg) rotateZ(360deg);
-}
-    }
-  
-@keyframes rotate-secondary {
-    0% {
-      transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-      -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-      -moz-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-      -ms-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-      -o-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-}
-    100% {
-      transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-      -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-      -moz-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-      -ms-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-      -o-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-}
-    }
-  
-@keyframes rotate-tertiary {
-    0% {
-      transform: rotateX(30deg) rotateY(50deg) rotateZ(0deg);
-      -webkit-transform: rotateX(30deg) rotateY(50deg) rotateZ(0deg);
-      -moz-transform: rotateX(30deg) rotateY(50deg) rotateZ(0deg);
-      -ms-transform: rotateX(30deg) rotateY(50deg) rotateZ(0deg);
-      -o-transform: rotateX(30deg) rotateY(50deg) rotateZ(0deg);
-}
-    100% {
-      transform: rotateX(30deg) rotateY(50deg) rotateZ(360deg);
-      -webkit-transform: rotateX(30deg) rotateY(50deg) rotateZ(360deg);
-      -moz-transform: rotateX(30deg) rotateY(50deg) rotateZ(360deg);
-      -ms-transform: rotateX(30deg) rotateY(50deg) rotateZ(360deg);
-      -o-transform: rotateX(30deg) rotateY(50deg) rotateZ(360deg);
-}
+        transform: rotateX(30deg) rotateY(-50deg) rotateZ(0deg);
+        -webkit-transform: rotateX(30deg) rotateY(-50deg) rotateZ(0deg);
+        -moz-transform: rotateX(30deg) rotateY(-50deg) rotateZ(0deg);
+        -ms-transform: rotateX(30deg) rotateY(-50deg) rotateZ(0deg);
+        -o-transform: rotateX(30deg) rotateY(-50deg) rotateZ(0deg);
     }
 
+    100% {
+        transform: rotateX(30deg) rotateY(-50deg) rotateZ(360deg);
+        -webkit-transform: rotateX(30deg) rotateY(-50deg) rotateZ(360deg);
+        -moz-transform: rotateX(30deg) rotateY(-50deg) rotateZ(360deg);
+        -ms-transform: rotateX(30deg) rotateY(-50deg) rotateZ(360deg);
+        -o-transform: rotateX(30deg) rotateY(-50deg) rotateZ(360deg);
+    }
+}
+
+@keyframes rotate-secondary {
+    0% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+        -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+        -moz-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+        -ms-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+        -o-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+        -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+        -moz-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+        -ms-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+        -o-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+}
+
+@keyframes rotate-tertiary {
+    0% {
+        transform: rotateX(30deg) rotateY(50deg) rotateZ(0deg);
+        -webkit-transform: rotateX(30deg) rotateY(50deg) rotateZ(0deg);
+        -moz-transform: rotateX(30deg) rotateY(50deg) rotateZ(0deg);
+        -ms-transform: rotateX(30deg) rotateY(50deg) rotateZ(0deg);
+        -o-transform: rotateX(30deg) rotateY(50deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateX(30deg) rotateY(50deg) rotateZ(360deg);
+        -webkit-transform: rotateX(30deg) rotateY(50deg) rotateZ(360deg);
+        -moz-transform: rotateX(30deg) rotateY(50deg) rotateZ(360deg);
+        -ms-transform: rotateX(30deg) rotateY(50deg) rotateZ(360deg);
+        -o-transform: rotateX(30deg) rotateY(50deg) rotateZ(360deg);
+    }
+}
+
 @keyframes appear {
-    from{
+    from {
         transform: translateY(10px);
         -webkit-transform: translateY(10px);
         -moz-transform: translateY(10px);
         -ms-transform: translateY(10px);
         -o-transform: translateY(10px);
         opacity: 0;
-}
-    to{
+    }
+
+    to {
         transform: translate(0);
         -webkit-transform: translate(0);
         -moz-transform: translate(0);
         -ms-transform: translate(0);
         -o-transform: translate(0);
         opacity: 1;
+    }
 }
+
+@keyframes gradient {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
     }
 
-@keyframes gradient { 
-        0% {
-         opacity:0;
-         transform:scale(1);
-         -webkit-transform:scale(1);
-         -moz-transform:scale(1);
-         -ms-transform:scale(1);
-         -o-transform:scale(1);
-}
-        40% {
-            opacity: 0.3;
-         transform:scale(1.1);
-         -webkit-transform:scale(1.1);
-         -moz-transform:scale(1.1);
-         -ms-transform:scale(1.1);
-         -o-transform:scale(1.1);
-}
-        70% {
-         transform:scale(0.9);
-         -webkit-transform:scale(0.9);
-         -moz-transform:scale(0.9);
-         -ms-transform:scale(0.9);
-         -o-transform:scale(0.9);
-}
-        to {
-         opacity: 1;
-         transform:scale(1);
-         -webkit-transform:scale(1);
-         -moz-transform:scale(1);
-         -ms-transform:scale(1);
-         -o-transform:scale(1);
-}
-       }  
+    40% {
+        opacity: 0.3;
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+    }
 
-.hide{
+    70% {
+        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -o-transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+}
+
+.hide {
     visibility: hidden;
 }
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -131,9 +139,9 @@ body{
     background-color: #f6f6f6c6;
     width: 100%;
     height: 100vh;
-    backdrop-filter: blur( 4.0px );
-    -webkit-backdrop-filter: blur( 4.0px );
-    position:fixed;
+    backdrop-filter: blur(4.0px);
+    -webkit-backdrop-filter: blur(4.0px);
+    position: fixed;
     z-index: 10;
     @include flex;
     animation: loading 2s;
@@ -148,7 +156,7 @@ body{
     width: 128px;
     height: 128px;
 }
-  
+
 .arc {
     position: absolute;
     width: 100%;
@@ -159,7 +167,7 @@ body{
     -ms-border-radius: 100%;
     -o-border-radius: 100%;
 }
-  
+
 .arc.one {
     left: 0;
     top: 0;
@@ -167,7 +175,7 @@ body{
     border-bottom: 8px solid $primary;
     -webkit-animation: rotate-primary 1s linear infinite;
 }
-  
+
 .arc.two {
     right: 0;
     top: 0;
@@ -175,7 +183,7 @@ body{
     border-right: 8px solid $secondary;
     -webkit-animation: rotate-secondary 1s linear infinite;
 }
-  
+
 .arc.three {
     right: 0;
     bottom: 0;
@@ -184,7 +192,7 @@ body{
     -webkit-animation: rotate-tertiary 1s linear infinite;
 }
 
-.loading{
+.loading {
     color: rgb(0, 0, 0);
     font-size: 24px;
     position: absolute;
@@ -192,33 +200,36 @@ body{
     letter-spacing: .5rem;
 }
 
-h2{
+h2 {
     font-weight: 700;
     font-size: 1.5rem;
     align-self: flex-start;
 
 }
 
-.maxshadow{
+.maxshadow {
     max-width: 1024px;
     margin: 0 auto;
-    -webkit-box-shadow: 0px 0px 22px -2px rgba(0,0,0,0.59); 
-    box-shadow: 0px 0px 22px -2px rgba(0,0,0,0.59);
+    -webkit-box-shadow: 0px 0px 22px -2px rgba(0, 0, 0, 0.59);
+    box-shadow: 0px 0px 22px -2px rgba(0, 0, 0, 0.59);
 }
 
-.header{
-    @include max{
+.header {
+    @include max {
         width: 1024px;
         margin: 0 auto;
     }
+
     height: 63px;
     padding-top: 0.4rem;
     @include flex;
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Shrikhand',
+    cursive;
     font-size: 1.9rem;
     position: relative;
     text-align: center;
-    .fas{
+
+    .fas {
         font-size: 1.2rem;
         line-height: 63px;
         position: absolute;
@@ -228,96 +239,111 @@ h2{
     }
 }
 
-.localization{
-    @include max{
+.localization {
+    @include max {
         width: 1024px;
         margin: 0 auto;
     }
+
     height: 50px;
     @include flex;
     position: relative;
     background-color: darken($grey, 6%);
     box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.358) inset;
-    &--gps{
+
+    &--gps {
         position: relative;
         left: -1.2rem;
     }
 }
 
-.reserve{
-    @include max{
+.reserve {
+    @include max {
         width: 1024px;
         margin: 0 auto;
     }
+
     width: 100vw;
     @include flex;
     flex-direction: column;
     justify-content: stretch;
     background-color: $grey;
-        h2{
-            text-align: center;
-            width: 300px;
-            @include tab{
-                width: 100%;
-            }
-            margin: 2.3rem auto .8rem auto;
-        }
-        p{  
-            font-weight: 300;
-            font-size: 1.1rem;
-            text-align: center;
-            color: darken($grey, 50);
-        }
-        &--btn{
-            @include flex;
-            @include shadow(40%);
-                &--explorer{
-                border-radius: 30px;
-                width: 220px;
-                height: 50px;
-                background-image:linear-gradient(-5deg, $primary 30%, $primary 0%, $secondary);
-                color: white;
-                margin-top: 2rem;
-                margin-bottom: 3.3rem;
-            }
-        }
-        &--btn:hover{
-            @include shadow(70%);
-            background-image:linear-gradient(-5deg, lighten($primary, 5%) 30%, lighten($primary, 5%) 0%, lighten($secondary, 5%));
 
+    h2 {
+        text-align: center;
+        width: 300px;
+
+        @include tab {
+            width: 100%;
         }
+
+        margin: 2.3rem auto .8rem auto;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 1.1rem;
+        text-align: center;
+        color: darken($grey, 50);
+    }
+
+    &--btn {
+        @include flex;
+        @include shadow(40%);
+
+        &--explorer {
+            border-radius: 30px;
+            width: 220px;
+            height: 50px;
+            background-image: linear-gradient(-5deg, $primary 30%, $primary 0%, $secondary);
+            color: white;
+            margin-top: 2rem;
+            margin-bottom: 3.3rem;
+        }
+    }
+
+    &--btn:hover {
+        @include shadow(70%);
+        background-image: linear-gradient(-5deg, lighten($primary, 5%) 30%, lighten($primary, 5%) 0%, lighten($secondary, 5%));
+
+    }
 }
 
-.photo{
-    @each $name, $image in $restaurant {
+.photo {
+
+    @each $name,
+    $image in $restaurant {
         &--#{$name} {
-        height: 270px;
-        background-size: 110%;
-        background-image: url('../Images/restaurants/#{$image}.jpg');
-        @if $name == "note" {
-            background-position:  0;
-        }
+            height: 270px;
+            background-size: 110%;
+            background-image: url('../Images/restaurants/#{$image}.jpg');
+
+            @if $name=="note" {
+                background-position: 0;
+            }
         }
     }
 }
 
-.photo{
+.photo {
 
     background-position: center;
     position: relative;
-    &--header{
+
+    &--header {
         height: 50px;
         background-color: $grey;
-        border-radius: 40px 40px 0 0 ;
-        -webkit-border-radius: 40px 40px 0 0 ;
-        -moz-border-radius: 40px 40px 0 0 ;
-        -ms-border-radius: 40px 40px 0 0 ;
-        -o-border-radius: 40px 40px 0 0 ;
+        border-radius: 40px 40px 0 0;
+        -webkit-border-radius: 40px 40px 0 0;
+        -moz-border-radius: 40px 40px 0 0;
+        -ms-border-radius: 40px 40px 0 0;
+        -o-border-radius: 40px 40px 0 0;
         position: relative;
         bottom: 50px;
+    }
 }
-}
-.menu{
+
+.menu {
     @include flex;
     flex-direction: column;
     justify-content: space-around;
@@ -326,193 +352,221 @@ h2{
     background-color: $grey;
     padding: 0 3vw;
     margin-top: -3.9rem;
-    > a{
+
+    >a {
         align-self: center;
     }
 
-    &--btn{
+    &--btn {
         @include flex;
         @include shadow(40%);
+
         &--explorer {
             border-radius: 30px;
             width: 190px;
             height: 50px;
-            background-image:linear-gradient(-5deg, $primary 30%, $primary 0%, $secondary);
+            background-image: linear-gradient(-5deg, $primary 30%, $primary 0%, $secondary);
             color: white;
             margin-top: 3rem;
             margin-bottom: 5rem;
         }
     }
-    &--btn:hover{
+
+    &--btn:hover {
         @include shadow(70%);
-        background-image:linear-gradient(-5deg, lighten($primary, 5%) 30%, lighten($primary, 5%) 0%, lighten($secondary, 5%));
+        background-image: linear-gradient(-5deg, lighten($primary, 5%) 30%, lighten($primary, 5%) 0%, lighten($secondary, 5%));
 
     }
 
-    &--name{
+    &--name {
         width: 100%;
         display: flex;
         padding: 0 .6rem;
         position: relative;
-        @include max{
+
+        @include max {
             max-width: 961px;
             align-self: center;
         }
-        h2{
-            @include mini{
+
+        h2 {
+            @include mini {
                 font-size: 1.5rem;
             }
-            font-family: 'Shrikhand', cursive;
+
+            font-family: 'Shrikhand',
+            cursive;
             font-size: 1.7rem;
             margin-left: 0;
             margin-top: -.45rem;
         }
-        &--heart{
+
+        &--heart {
             margin-top: -.5rem;
             align-items: center;
             @include heart;
-        }   
-    }
-
-    &--card{
-    opacity: 0;
-    @include flex;
-    @include shadow;
-    position: relative;
-    justify-content: space-between;
-    height: 69px;
-    width: 94vw;
-    @include max{
-        max-width: 961px;
-        align-self: center;
-    }
-    margin-top: .8rem;
-    background-color: white;
-    border-radius: .8rem;
-    -webkit-border-radius: .8rem;
-    -moz-border-radius: .8rem;
-    -ms-border-radius: .8rem;
-    -o-border-radius: .8rem;
-    overflow: hidden;
-            &--title{
-                width: 75%;
-                margin-left: .8rem;
-                line-height: 1.5rem;
-                transition: width 0.8s;
-                &--bold{
-                    white-space: nowrap; 
-                    overflow:hidden;
-                    text-overflow: ellipsis;
-                    font-size: 1.1rem;
-                    font-weight: 500;
-                }
-                &--light{
-                    white-space: nowrap; 
-                    overflow:hidden;
-                    text-overflow: ellipsis;
-                    font-weight: 300;
-                }
-            }
-            &--price{
-                align-self: flex-end;
-                position: absolute;
-                font-weight: 500;
-                right: 1.2rem;
-                margin-bottom: .7rem;
-                transition: transform .8s;
-                -webkit-transition: transform .8s;
-                -moz-transition: transform .8s;
-                -ms-transition: transform .8s;
-                -o-transition: transform .8s;
-}
-            &--validate{
-                @include flex;
-                position: absolute;
-                width: 60px;
-                height: 100%;
-                right: -60px;
-                background-color: $tertiary;
-                transition: transform 0.8s;
-                -webkit-transition: transform 0.8s;
-                -moz-transition: transform 0.8s;
-                -ms-transition: transform 0.8s;
-                -o-transition: transform 0.8s;
-                .fas{
-                    width: 20px;
-                    height: 20px;
-                    font-size: .8rem;
-                    background-color: white;
-                    border-radius: 50%;
-                    @include flex;
-                    color: $tertiary;
-                    -webkit-border-radius: 50%;
-                    -moz-border-radius: 50%;
-                    -ms-border-radius: 50%;
-                    -o-border-radius: 50%;
-                    transition: transform 1s;
-                    -webkit-transition: transform 1s;
-                    -moz-transition: transform 1s;
-                    -ms-transition: transform 1s;
-                    -o-transition: transform 1s;
-}
-            }
-            &:hover{
-                .menu--card--validate, .menu--card--price{
-                    transform: translateX(-60px);
-}
-                .menu--card--title{
-                    width: 55%;
-}
-                .fas{
-                    transform: rotate(360deg);
-                    -webkit-transform: rotate(360deg);
-                    -moz-transform: rotate(360deg);
-                    -ms-transform: rotate(360deg);
-                    -o-transform: rotate(360deg);
-}
-            }
-    
-}
-
-@for $i from 3 through 14 {
-    &--card:nth-of-type(#{$i}) {
-        @if opacity==0 then{
-            animation: appear 1s .1s*$i;
-            animation-fill-mode: forwards;
         }
-
     }
-}
-    &--heading{
-        @include max{
+
+    &--card {
+        opacity: 0;
+        @include flex;
+        @include shadow;
+        position: relative;
+        justify-content: space-between;
+        height: 69px;
+        width: 94vw;
+
+        @include max {
+            max-width: 961px;
             align-self: center;
         }
-    text-transform: uppercase;
-    border-bottom: 2px solid $tertiary;
-    width: 40px;
-    margin: 1.8rem .6rem .2rem .4rem;
-    line-height: 1.7rem;
-}
+
+        margin-top: .8rem;
+        background-color: white;
+        border-radius: .8rem;
+        -webkit-border-radius: .8rem;
+        -moz-border-radius: .8rem;
+        -ms-border-radius: .8rem;
+        -o-border-radius: .8rem;
+        overflow: hidden;
+
+        &--title {
+            width: 75%;
+            margin-left: .8rem;
+            line-height: 1.5rem;
+            transition: width 0.8s;
+
+            &--bold {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 1.1rem;
+                font-weight: 500;
+            }
+
+            &--light {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-weight: 300;
+            }
+        }
+
+        &--price {
+            align-self: flex-end;
+            position: absolute;
+            font-weight: 500;
+            right: 1.2rem;
+            margin-bottom: .7rem;
+            transition: transform .8s;
+            -webkit-transition: transform .8s;
+            -moz-transition: transform .8s;
+            -ms-transition: transform .8s;
+            -o-transition: transform .8s;
+        }
+
+        &--validate {
+            @include flex;
+            position: absolute;
+            width: 60px;
+            height: 100%;
+            right: -60px;
+            background-color: $tertiary;
+            transition: transform 0.8s;
+            -webkit-transition: transform 0.8s;
+            -moz-transition: transform 0.8s;
+            -ms-transition: transform 0.8s;
+            -o-transition: transform 0.8s;
+
+            .fas {
+                width: 20px;
+                height: 20px;
+                font-size: .8rem;
+                background-color: white;
+                border-radius: 50%;
+                @include flex;
+                color: $tertiary;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                transition: transform 1s;
+                -webkit-transition: transform 1s;
+                -moz-transition: transform 1s;
+                -ms-transition: transform 1s;
+                -o-transition: transform 1s;
+            }
+        }
+
+        &:hover {
+
+            .menu--card--validate,
+            .menu--card--price {
+                transform: translateX(-60px);
+            }
+
+            .menu--card--title {
+                width: 55%;
+            }
+
+            .fas {
+                transform: rotate(360deg);
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+            }
+        }
+
+    }
+
+    @for $i from 3 through 14 {
+        &--card:nth-of-type(#{$i}) {
+            @if opacity==0 then {
+                animation: appear 1s .1s*$i;
+                animation-fill-mode: forwards;
+            }
+
+        }
+    }
+
+    &--heading {
+        @include max {
+            align-self: center;
+        }
+
+        text-transform: uppercase;
+        border-bottom: 2px solid $tertiary;
+        width: 40px;
+        margin: 1.8rem .6rem .2rem .4rem;
+        line-height: 1.7rem;
+    }
 }
 
-.functioning{
-    @include max{
+.functioning {
+    @include max {
         width: 1024px;
         margin: 0 auto;
     }
+
     @include flex;
     flex-direction: column;
 
-    @include tab{
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center};
+    @include tab {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center
+    }
+
+    ;
 
     justify-content:space-between;
     padding-top: 3rem;
     padding-bottom: 4.3rem;
     gap: 1.6rem;
-    &--title{
+
+    &--title {
         overflow: hidden;
         position: relative;
         width: 90%;
@@ -520,62 +574,83 @@ h2{
         justify-content: left;
         margin-bottom: .2rem;
     }
-        &--items{
-            @include mini{
-                width: 280px;            }
-            @include tab{
-                width: 240px;
-            };
-            @include tabpro1{
-                margin-left: 0;};
-            margin-left: 12px;
-            width: 325px;
-            height: 72px;
-            background-color: $grey;
-            @include flex;
-            @include shadow(20%);
-            border-radius: 1.5rem;
-            font-size: 1rem;
-            position: relative;
-                    &--icon{
-                        @include tab{
-                            left: 1rem;};
-                        position: absolute;
-                        left: 2.5rem;
-                        color: darken($grey, 60%);
-                    }
-                
-                    p{            
-                        @include tab{
-                        left: 3rem;};
-                        position: absolute;
-                        left: 5rem;
-                    }
-                
-                    .number{            
-                        @include tab{
-                        top: -12px;
-                        left: 108px};
 
-                        position: absolute;
-                        @include flex;
-                        font-size: .8rem;
-                        width: 24px;
-                        height: 24px;
-                        background-color: $primary;
-                        border-radius: 50%;
-                        left: -12px;
-                        color:white;
-                    }
+    &--items {
+        @include mini {
+            width: 280px;
         }
+
+        @include tab {
+            width: 240px;
+        }
+
+        ;
+
+        @include tabpro1 {
+            margin-left: 0;
+        }
+
+        ;
+        margin-left: 12px;
+        width: 325px;
+        height: 72px;
+        background-color: $grey;
+        @include flex;
+        @include shadow(20%);
+        border-radius: 1.5rem;
+        font-size: 1rem;
+        position: relative;
+
+        &--icon {
+            @include tab {
+                left: 1rem;
+            }
+
+            ;
+            position: absolute;
+            left: 2.5rem;
+            color: darken($grey, 60%);
+        }
+
+        p {
+            @include tab {
+                left: 3rem;
+            }
+
+            ;
+            position: absolute;
+            left: 5rem;
+        }
+
+        .number {
+            @include tab {
+                top: -12px;
+                left: 108px
+            }
+
+            ;
+
+            position: absolute;
+            @include flex;
+            font-size: .8rem;
+            width: 24px;
+            height: 24px;
+            background-color: $primary;
+            border-radius: 50%;
+            left: -12px;
+            color:white;
+        }
+    }
+
     @include functioning--itemshover;
 }
 
-.restaurants{
-    @include max{
+.restaurants {
+    @include max {
         width: 1024px;
         margin: 0 auto;
     }
+
     @include flex;
     background-color: $grey;
     flex-wrap: wrap;
@@ -584,27 +659,34 @@ h2{
     gap: 1.5rem;
     padding-top: 3.2rem;
     padding-bottom: 4rem;
-    :nth-child(3){
-        img{
-        position: absolute;
-        bottom: -15px;
+
+    :nth-child(3) {
+        img {
+            position: absolute;
+            bottom: -15px;
         }
     }
-    &--title{
+
+    &--title {
         @include flex;
         width: 90%;
         justify-content: left;
     }
 }
 
-.restaurants--card{
-    @include mini{
+.restaurants--card {
+    @include mini {
         width: 290px;
-    };
-    @include tabpro{
+    }
+
+    ;
+
+    @include tabpro {
         width: 420px;
         height: calc(420px/1.33);
-    };
+    }
+
+    ;
     @include flex;
     @include shadow;
     flex-direction: column;
@@ -613,78 +695,86 @@ h2{
     overflow: hidden;
     position: relative;
     border-radius: 1rem;
-                img{
-                    position: absolute;
-                    bottom: 75px;
-                }
-                &--new{
-                    position: absolute;
-                    display: inline;
-                    background-color: $tertiary;
-                    padding: .4rem .7rem;
-                    right: .8rem;
-                    top: .8rem;
-                    font-size: .9rem;
-                    font-weight: 500;
-                    color: darken($tertiary, 40);
-                    border-radius: .1rem;
-                }
-                &--title{
-                    background-color: white;
-                    @include flex;
-                    width: 100%;
-                    height: 75px;
-                    padding: 1rem 1rem;
-                    justify-content: space-between;
-                    position: absolute;
-                    bottom: 0;
-                        &--nameloca{
-                            h3{
-                                font-weight: 700;
-                                font-size: 1.1rem;
-                            }
-                            h4{
-                                margin-top: .2rem;
-                                font-weight: 300;
-                                font-size: 1rem;
-                            }
-                        }
-                        &--heart{
-                            margin-top: 1rem;
-                            margin-right: 1rem;
-                            @include heart;
-                        }
-                }
+
+    img {
+        position: absolute;
+        bottom: 75px;
+    }
+
+    &--new {
+        position: absolute;
+        display: inline;
+        background-color: $tertiary;
+        padding: .4rem .7rem;
+        right: .8rem;
+        top: .8rem;
+        font-size: .9rem;
+        font-weight: 500;
+        color: darken($tertiary, 40);
+        border-radius: .1rem;
+    }
+
+    &--title {
+        background-color: white;
+        @include flex;
+        width: 100%;
+        height: 75px;
+        padding: 1rem 1rem;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 0;
+
+        &--nameloca {
+            h3 {
+                font-weight: 700;
+                font-size: 1.1rem;
+            }
+
+            h4 {
+                margin-top: .2rem;
+                font-weight: 300;
+                font-size: 1rem;
+            }
+        }
+
+        &--heart {
+            margin-top: 1rem;
+            margin-right: 1rem;
+            @include heart;
+        }
+    }
 }
 
-.restaurants--card:hover{
+.restaurants--card:hover {
     @include shadow(30%);
 }
 
-
-
-footer{
-    @include max{
+footer {
+    @include max {
         width: 1024px;
         margin: 0 auto;
         padding: 1.5rem 90px;
     }
+
     background-color: darken($grey, 75%);
     height: 200px;
     color: white;
     padding: 1.5rem 1.5rem;
     line-height: 1.6rem;
-        .logo{
-            font-family: 'Shrikhand',sans-serif;
-            font-size: 1rem;
-            margin-bottom: .9rem;
-        }
-        .fas{
-            font-size: .8rem;
-            width: 1rem;
-            margin-right: .5rem;
-        }
-        .contact>a{
-            color: white;
-        }
+
+    .logo {
+        font-family: 'Shrikhand', sans-serif;
+        font-size: 1rem;
+        margin-bottom: .9rem;
+    }
+
+    .fas {
+        font-size: .8rem;
+        width: 1rem;
+        margin-right: .5rem;
+    }
+
+    .contact>a {
+        color: white;
+    }
 }

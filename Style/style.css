@@ -555,7 +555,8 @@ h2 {
   -ms-transition: transform 1s;
   -o-transition: transform 1s;
 }
-.menu--card:hover .menu--card--validate, .menu--card:hover .menu--card--price {
+.menu--card:hover .menu--card--validate,
+.menu--card:hover .menu--card--price {
   transform: translateX(-60px);
 }
 .menu--card:hover .menu--card--title {
