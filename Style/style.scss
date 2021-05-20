@@ -571,9 +571,10 @@ h2{
     padding-bottom: 4.3rem;
     gap: 1.6rem;
     &--title{
-        margin-left: 2.4rem;
+        overflow: hidden;
+        position: relative;
+        width: 90%;
         @include flex;
-        width: 100%;
         justify-content: left;
         margin-bottom: .2rem;
     }
@@ -646,12 +647,8 @@ h2{
         }
     }
     &--title{
-        margin-left: 1.2rem;
-        @include tab{
-            margin-left: 2.4rem;
-        }
         @include flex;
-        width: 100%;
+        width: 90%;
         justify-content: left;
     }
 }

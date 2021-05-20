@@ -726,11 +726,12 @@ h2 {
   }
 }
 .functioning--title {
-  margin-left: 2.4rem;
+  overflow: hidden;
+  position: relative;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   justify-content: left;
   margin-bottom: 0.2rem;
 }
@@ -825,17 +826,11 @@ h2 {
   bottom: -15px;
 }
 .restaurants--title {
-  margin-left: 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 90%;
   justify-content: left;
-}
-@media screen and (min-width: 599px) {
-  .restaurants--title {
-    margin-left: 2.4rem;
-  }
 }
 
 .restaurants--card {
