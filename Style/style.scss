@@ -440,6 +440,9 @@ h2{
             align-self: center;
         }
         h2{
+            @include mini{
+                font-size: 1.5rem;
+            }
             font-family: 'Shrikhand', cursive;
             font-size: 1.7rem;
             margin-left: 0;
@@ -579,6 +582,8 @@ h2{
         margin-bottom: .2rem;
     }
         &--items{
+            @include mini{
+                width: 280px;            }
             @include tab{
                 width: 240px;
             };
@@ -654,6 +659,9 @@ h2{
 }
 
 .restaurants--card{
+    @include mini{
+        width: 290px;
+    };
     @include tabpro{
         width: 420px;
         height: calc(420px/1.33);

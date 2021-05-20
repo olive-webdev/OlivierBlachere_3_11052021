@@ -528,6 +528,11 @@ h2 {
   margin-left: 0;
   margin-top: -0.45rem;
 }
+@media screen and (max-width: 374px) {
+  .menu--name h2 {
+    font-size: 1.5rem;
+  }
+}
 .menu--name--heart {
   margin-top: -0.5rem;
   align-items: center;
@@ -748,6 +753,11 @@ h2 {
   font-size: 1rem;
   position: relative;
 }
+@media screen and (max-width: 374px) {
+  .functioning--items {
+    width: 280px;
+  }
+}
 @media screen and (min-width: 599px) {
   .functioning--items {
     width: 240px;
@@ -844,6 +854,11 @@ h2 {
   overflow: hidden;
   position: relative;
   border-radius: 1rem;
+}
+@media screen and (max-width: 374px) {
+  .restaurants--card {
+    width: 290px;
+  }
 }
 @media screen and (min-width: 928px) {
   .restaurants--card {
