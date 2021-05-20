@@ -225,6 +225,7 @@ a:visited, a:active, a:link {
 }
 @keyframes gradient {
   0% {
+    opacity: 0;
     transform: scale(1);
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
@@ -232,20 +233,22 @@ a:visited, a:active, a:link {
     -o-transform: scale(1);
   }
   40% {
-    transform: scale(1.3);
-    -webkit-transform: scale(1.3);
-    -moz-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    -o-transform: scale(1.3);
+    opacity: 0.3;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
   }
   70% {
-    transform: scale(0.8);
-    -webkit-transform: scale(0.8);
-    -moz-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    -o-transform: scale(0.8);
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
   }
-  100% {
+  to {
+    opacity: 1;
     transform: scale(1);
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
@@ -262,11 +265,11 @@ body {
 }
 
 .wrapper {
-  background-color: rgba(46, 46, 46, 0.666);
+  background-color: #f6f6f6c6;
   width: 100%;
   height: 100vh;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   position: fixed;
   z-index: 10;
   display: flex;
@@ -321,18 +324,24 @@ body {
 }
 
 .loading {
-  color: white;
+  color: black;
   font-size: 24px;
   position: absolute;
   top: calc(50% + 94px);
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.5rem;
 }
 
 h2 {
   font-weight: 700;
   font-size: 1.5rem;
   align-self: flex-start;
-  margin-left: 6vw;
+}
+
+.maxshadow {
+  max-width: 1024px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 0px 22px -2px rgba(0, 0, 0, 0.59);
+  box-shadow: 0px 0px 22px -2px rgba(0, 0, 0, 0.59);
 }
 
 .header {
@@ -344,6 +353,13 @@ h2 {
   font-family: "Shrikhand", cursive;
   font-size: 1.9rem;
   position: relative;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .header {
+    width: 1024px;
+    margin: 0 auto;
+  }
 }
 .header .fas {
   font-size: 1.2rem;
@@ -362,6 +378,12 @@ h2 {
   background-color: #e7e7e7;
   box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.358) inset;
 }
+@media screen and (min-width: 1024px) {
+  .localization {
+    width: 1024px;
+    margin: 0 auto;
+  }
+}
 .localization--gps {
   position: relative;
   left: -1.2rem;
@@ -376,9 +398,21 @@ h2 {
   justify-content: stretch;
   background-color: #f6f6f6;
 }
+@media screen and (min-width: 1024px) {
+  .reserve {
+    width: 1024px;
+    margin: 0 auto;
+  }
+}
 .reserve h2 {
   text-align: center;
-  margin: 2.3rem 3rem 0.8rem 3rem;
+  width: 300px;
+  margin: 2.3rem auto 0.8rem auto;
+}
+@media screen and (min-width: 599px) {
+  .reserve h2 {
+    width: 100%;
+  }
 }
 .reserve p {
   font-weight: 300;
@@ -414,6 +448,7 @@ h2 {
   height: 270px;
   background-size: 110%;
   background-image: url("../Images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-position: 0;
 }
 .photo--francaise {
   height: 270px;
@@ -424,10 +459,6 @@ h2 {
   height: 270px;
   background-size: 110%;
   background-image: url("../Images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-}
-
-.photo--note {
-  background-position: 0;
 }
 
 .photo {
@@ -447,7 +478,6 @@ h2 {
 }
 
 .menu {
-  height: 1160px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -457,7 +487,7 @@ h2 {
   position: relative;
   background-color: #f6f6f6;
   padding: 0 3vw;
-  margin-top: -50px;
+  margin-top: -3.9rem;
 }
 .menu > a {
   align-self: center;
@@ -470,20 +500,27 @@ h2 {
 }
 .menu--btn--explorer {
   border-radius: 30px;
-  width: 220px;
+  width: 190px;
   height: 50px;
   background-image: linear-gradient(-5deg, #9356DC 30%, #9356DC 0%, #FF79DA);
   color: white;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
 }
 .menu--btn:hover {
   box-shadow: 0px 3px 20px -5px #444444;
 }
 .menu--name {
   width: 100%;
-  height: 2rem;
   display: flex;
+  padding: 0 0.6rem;
+  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  .menu--name {
+    max-width: 961px;
+    align-self: center;
+  }
 }
 .menu--name h2 {
   font-family: "Shrikhand", cursive;
@@ -492,21 +529,22 @@ h2 {
   margin-top: -0.45rem;
 }
 .menu--name--heart {
+  margin-top: -0.5rem;
   align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   top: 0rem;
-  right: 1rem;
+  right: 0.1rem;
 }
 .menu--name--heart .fas {
   transform: scaleX(90%);
   font-size: 1.5rem;
   -webkit-text-stroke: 0.05rem black;
-  color: white;
+  color: transparent;
 }
 .menu--name--heart .fas:hover {
   background: linear-gradient(180deg, #9356DC, #FF79DA) 0% 50%;
@@ -525,9 +563,9 @@ h2 {
   box-shadow: 0px 3px 20px -5px #d0d0d0;
   position: relative;
   justify-content: space-between;
-  height: 70px;
+  height: 69px;
   width: 94vw;
-  margin-top: 0.9rem;
+  margin-top: 0.8rem;
   background-color: white;
   border-radius: 0.8rem;
   -webkit-border-radius: 0.8rem;
@@ -535,6 +573,12 @@ h2 {
   -ms-border-radius: 0.8rem;
   -o-border-radius: 0.8rem;
   overflow: hidden;
+}
+@media screen and (min-width: 1024px) {
+  .menu--card {
+    max-width: 961px;
+    align-self: center;
+  }
 }
 .menu--card--title {
   width: calc(100% - 70px);
@@ -649,8 +693,13 @@ h2 {
   text-transform: uppercase;
   border-bottom: 2px solid #99E2D0;
   width: 40px;
-  margin-top: 1.8rem;
-  line-height: 1.6rem;
+  margin: 1.8rem 0.6rem 0.2rem 0.4rem;
+  line-height: 1.7rem;
+}
+@media screen and (min-width: 1024px) {
+  .menu--heading {
+    align-self: center;
+  }
 }
 
 .functioning {
@@ -663,13 +712,31 @@ h2 {
   padding-bottom: 4.3rem;
   gap: 1.6rem;
 }
-.functioning > h2 {
+@media screen and (min-width: 1024px) {
+  .functioning {
+    width: 1024px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 599px) {
+  .functioning {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.functioning--title {
+  margin-left: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  justify-content: left;
   margin-bottom: 0.2rem;
 }
 .functioning--items {
-  width: 90vw;
   margin-left: 12px;
-  max-width: 325px;
+  width: 325px;
   height: 72px;
   background-color: #f6f6f6;
   display: flex;
@@ -680,14 +747,34 @@ h2 {
   font-size: 1rem;
   position: relative;
 }
+@media screen and (min-width: 599px) {
+  .functioning--items {
+    width: 240px;
+  }
+}
+@media screen and (min-width: 808px) {
+  .functioning--items {
+    margin-left: 0;
+  }
+}
 .functioning--items--icon {
   position: absolute;
   left: 2.5rem;
   color: #5d5d5d;
 }
+@media screen and (min-width: 928px) {
+  .functioning--items--icon {
+    left: 1rem;
+  }
+}
 .functioning--items p {
   position: absolute;
   left: 5rem;
+}
+@media screen and (min-width: 928px) {
+  .functioning--items p {
+    left: 3rem;
+  }
 }
 .functioning--items .number {
   position: absolute;
@@ -701,6 +788,12 @@ h2 {
   border-radius: 50%;
   left: -12px;
   color: white;
+}
+@media screen and (min-width: 808px) {
+  .functioning--items .number {
+    top: -12px;
+    left: 108px;
+  }
 }
 .functioning .functioning--items:hover {
   background-color: #f2eafb;
@@ -721,16 +814,28 @@ h2 {
   padding-top: 3.2rem;
   padding-bottom: 4rem;
 }
+@media screen and (min-width: 1024px) {
+  .restaurants {
+    width: 1024px;
+    margin: 0 auto;
+  }
+}
 .restaurants :nth-child(3) img {
   position: absolute;
   bottom: -15px;
 }
 .restaurants--title {
+  margin-left: 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   justify-content: left;
+}
+@media screen and (min-width: 599px) {
+  .restaurants--title {
+    margin-left: 2.4rem;
+  }
 }
 
 .restaurants--card {
@@ -743,7 +848,13 @@ h2 {
   height: 250px;
   overflow: hidden;
   position: relative;
-  border-radius: 1rem 1rem 1rem 1rem;
+  border-radius: 1rem;
+}
+@media screen and (min-width: 928px) {
+  .restaurants--card {
+    width: 420px;
+    height: calc(420px/1.33);
+  }
 }
 .restaurants--card img {
   position: absolute;
@@ -771,7 +882,7 @@ h2 {
   padding: 1rem 1rem;
   justify-content: space-between;
   position: absolute;
-  top: 175px;
+  bottom: 0;
 }
 .restaurants--card--title--nameloca h3 {
   font-weight: 700;
@@ -784,20 +895,21 @@ h2 {
 }
 .restaurants--card--title--heart {
   margin-top: 1rem;
+  margin-right: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   top: 0rem;
-  right: 1rem;
+  right: 0.1rem;
 }
 .restaurants--card--title--heart .fas {
   transform: scaleX(90%);
   font-size: 1.5rem;
   -webkit-text-stroke: 0.05rem black;
-  color: white;
+  color: transparent;
 }
 .restaurants--card--title--heart .fas:hover {
   background: linear-gradient(180deg, #9356DC, #FF79DA) 0% 50%;
@@ -817,8 +929,15 @@ footer {
   background-color: #373737;
   height: 200px;
   color: white;
-  padding: 1.5rem 7vw;
+  padding: 1.5rem 1.5rem;
   line-height: 1.6rem;
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    width: 1024px;
+    margin: 0 auto;
+    padding: 1.5rem 90px;
+  }
 }
 footer .logo {
   font-family: "Shrikhand", sans-serif;

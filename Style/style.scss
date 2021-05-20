@@ -171,35 +171,38 @@
     }
 
 @keyframes gradient { 
-    0% {
-     transform:scale(1)    ;
-     -webkit-transform:scale(1);
-     -moz-transform:scale(1);
-     -ms-transform:scale(1);
-     -o-transform:scale(1);
-    }
-    40% {
-     transform:scale(1.3)    ;
-     -webkit-transform:scale(1.3);
-     -moz-transform:scale(1.3);
-     -ms-transform:scale(1.3);
-     -o-transform:scale(1.3);
-    }
-    70% {
-     transform:scale(.8)    ;
-     -webkit-transform:scale(.8);
-     -moz-transform:scale(.8);
-     -ms-transform:scale(.8);
-     -o-transform:scale(.8);
-    }
-    100% {
-     transform:scale(1)    ;
-     -webkit-transform:scale(1);
-     -moz-transform:scale(1);
-     -ms-transform:scale(1);
-     -o-transform:scale(1);
-    }
-}  
+        0% {
+         opacity:0;
+         transform:scale(1);
+         -webkit-transform:scale(1);
+         -moz-transform:scale(1);
+         -ms-transform:scale(1);
+         -o-transform:scale(1);
+}
+        40% {
+            opacity: 0.3;
+         transform:scale(1.1);
+         -webkit-transform:scale(1.1);
+         -moz-transform:scale(1.1);
+         -ms-transform:scale(1.1);
+         -o-transform:scale(1.1);
+}
+        70% {
+         transform:scale(0.9);
+         -webkit-transform:scale(0.9);
+         -moz-transform:scale(0.9);
+         -ms-transform:scale(0.9);
+         -o-transform:scale(0.9);
+}
+        to {
+         opacity: 1;
+         transform:scale(1);
+         -webkit-transform:scale(1);
+         -moz-transform:scale(1);
+         -ms-transform:scale(1);
+         -o-transform:scale(1);
+}
+       }  
 
 .hide{
     visibility: hidden;
@@ -210,11 +213,11 @@ body{
 }
 
 .wrapper {
-    background-color: rgba(46, 46, 46, 0.666);
+    background-color: #f6f6f6c6;
     width: 100%;
     height: 100vh;
-    backdrop-filter: blur( 8.0px );
-    -webkit-backdrop-filter: blur( 8.0px );
+    backdrop-filter: blur( 4.0px );
+    -webkit-backdrop-filter: blur( 4.0px );
     position:fixed;
     z-index: 10;
     @include flex;
@@ -267,27 +270,39 @@ body{
 }
 
 .loading{
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 24px;
     position: absolute;
     top: calc(50% + 94px);
-    letter-spacing: .3rem;
+    letter-spacing: .5rem;
 }
 
 h2{
     font-weight: 700;
     font-size: 1.5rem;
     align-self: flex-start;
-    margin-left: 6vw;
+
+}
+
+.maxshadow{
+    max-width: 1024px;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 0px 22px -2px rgba(0,0,0,0.59); 
+    box-shadow: 0px 0px 22px -2px rgba(0,0,0,0.59);
 }
 
 .header{
+    @include max{
+        width: 1024px;
+        margin: 0 auto;
+    }
     height: 63px;
     padding-top: 0.4rem;
     @include flex;
     font-family: 'Shrikhand', cursive;
     font-size: 1.9rem;
     position: relative;
+    text-align: center;
     .fas{
         font-size: 1.2rem;
         line-height: 63px;
@@ -299,6 +314,10 @@ h2{
 }
 
 .localization{
+    @include max{
+        width: 1024px;
+        margin: 0 auto;
+    }
     height: 50px;
     @include flex;
     position: relative;
@@ -311,6 +330,10 @@ h2{
 }
 
 .reserve{
+    @include max{
+        width: 1024px;
+        margin: 0 auto;
+    }
     width: 100vw;
     @include flex;
     flex-direction: column;
@@ -318,7 +341,11 @@ h2{
     background-color: $grey;
         h2{
             text-align: center;
-            margin: 2.3rem 3rem .8rem 3rem;
+            width: 300px;
+            @include tab{
+                width: 100%;
+            }
+            margin: 2.3rem auto .8rem auto;
         }
         p{  
             font-weight: 300;
@@ -329,7 +356,7 @@ h2{
         &--btn{
             @include flex;
             @include shadow(40%);
-            &--explorer {
+                &--explorer{
                 border-radius: 30px;
                 width: 220px;
                 height: 50px;
@@ -350,12 +377,13 @@ h2{
         height: 270px;
         background-size: 110%;
         background-image: url('../Images/restaurants/#{$image}.jpg');
+        @if $name == "note" {
+            background-position:  0;
+        }
         }
     }
 }
-.photo--note{
-    background-position:  0;
-}
+
 .photo{
 
     background-position: center;
@@ -373,7 +401,6 @@ h2{
 }
 }
 .menu{
-    height: 1160px;
     @include flex;
     flex-direction: column;
     justify-content: space-around;
@@ -381,7 +408,7 @@ h2{
     position: relative;
     background-color: $grey;
     padding: 0 3vw;
-    margin-top: -50px;
+    margin-top: -3.9rem;
     > a{
         align-self: center;
     }
@@ -391,12 +418,12 @@ h2{
         @include shadow(40%);
         &--explorer {
             border-radius: 30px;
-            width: 220px;
+            width: 190px;
             height: 50px;
             background-image:linear-gradient(-5deg, $primary 30%, $primary 0%, $secondary);
             color: white;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
+            margin-top: 3rem;
+            margin-bottom: 5rem;
         }
     }
     &--btn:hover{
@@ -405,8 +432,13 @@ h2{
 
     &--name{
         width: 100%;
-        height: 2rem;
         display: flex;
+        padding: 0 .6rem;
+        position: relative;
+        @include max{
+            max-width: 961px;
+            align-self: center;
+        }
         h2{
             font-family: 'Shrikhand', cursive;
             font-size: 1.7rem;
@@ -414,6 +446,7 @@ h2{
             margin-top: -.45rem;
         }
         &--heart{
+            margin-top: -.5rem;
             align-items: center;
             @include heart;
         }   
@@ -425,9 +458,13 @@ h2{
     @include shadow;
     position: relative;
     justify-content: space-between;
-    height: 70px;
+    height: 69px;
     width: 94vw;
-    margin-top: .9rem;
+    @include max{
+        max-width: 961px;
+        align-self: center;
+    }
+    margin-top: .8rem;
     background-color: white;
     border-radius: .8rem;
     -webkit-border-radius: .8rem;
@@ -505,29 +542,49 @@ h2{
     }
 }
     &--heading{
-        text-transform: uppercase;
-        border-bottom: 2px solid $tertiary;
-        width: 40px;
-        margin-top: 1.8rem;
-        line-height: 1.6rem;
-    }
-
+        @include max{
+            align-self: center;
+        }
+    text-transform: uppercase;
+    border-bottom: 2px solid $tertiary;
+    width: 40px;
+    margin: 1.8rem .6rem .2rem .4rem;
+    line-height: 1.7rem;
+}
 }
 
 .functioning{
+    @include max{
+        width: 1024px;
+        margin: 0 auto;
+    }
     @include flex;
     flex-direction: column;
+
+    @include tab{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center};
+
     justify-content:space-between;
     padding-top: 3rem;
     padding-bottom: 4.3rem;
     gap: 1.6rem;
-    >h2{
+    &--title{
+        margin-left: 2.4rem;
+        @include flex;
+        width: 100%;
+        justify-content: left;
         margin-bottom: .2rem;
     }
         &--items{
-            width: 90vw;
-            margin-left: 12px;;
-            max-width: 325px;
+            @include tab{
+                width: 240px;
+            };
+            @include tabpro1{
+                margin-left: 0;};
+            margin-left: 12px;
+            width: 325px;
             height: 72px;
             background-color: $grey;
             @include flex;
@@ -536,17 +593,25 @@ h2{
             font-size: 1rem;
             position: relative;
                     &--icon{
+                        @include tabpro{
+                            left: 1rem;};
                         position: absolute;
                         left: 2.5rem;
                         color: darken($grey, 60%);
                     }
                 
-                    p{
+                    p{            
+                        @include tabpro{
+                        left: 3rem;};
                         position: absolute;
                         left: 5rem;
                     }
                 
-                    .number{
+                    .number{            
+                        @include tabpro1{
+                        top: -12px;
+                        left: 108px};
+
                         position: absolute;
                         @include flex;
                         font-size: .8rem;
@@ -562,13 +627,16 @@ h2{
 }
 
 .restaurants{
+    @include max{
+        width: 1024px;
+        margin: 0 auto;
+    }
     @include flex;
     background-color: $grey;
     flex-wrap: wrap;
     justify-content:center;
     align-items: center;
     gap: 1.5rem;
-
     padding-top: 3.2rem;
     padding-bottom: 4rem;
     :nth-child(3){
@@ -578,6 +646,10 @@ h2{
         }
     }
     &--title{
+        margin-left: 1.2rem;
+        @include tab{
+            margin-left: 2.4rem;
+        }
         @include flex;
         width: 100%;
         justify-content: left;
@@ -585,6 +657,10 @@ h2{
 }
 
 .restaurants--card{
+    @include tabpro{
+        width: 420px;
+        height: calc(420px/1.33);
+    };
     @include flex;
     @include shadow;
     flex-direction: column;
@@ -592,7 +668,7 @@ h2{
     height: 250px;
     overflow: hidden;
     position: relative;
-    border-radius: 1rem 1rem 1rem 1rem ;
+    border-radius: 1rem;
                 img{
                     position: absolute;
                     bottom: 75px;
@@ -617,7 +693,7 @@ h2{
                     padding: 1rem 1rem;
                     justify-content: space-between;
                     position: absolute;
-                    top: 175px;
+                    bottom: 0;
                         &--nameloca{
                             h3{
                                 font-weight: 700;
@@ -631,6 +707,7 @@ h2{
                         }
                         &--heart{
                             margin-top: 1rem;
+                            margin-right: 1rem;
                             @include heart;
                         }
                 }
@@ -643,10 +720,15 @@ h2{
 
 
 footer{
+    @include max{
+        width: 1024px;
+        margin: 0 auto;
+        padding: 1.5rem 90px;
+    }
     background-color: darken($grey, 75%);
     height: 200px;
     color: white;
-    padding: 1.5rem 7vw;
+    padding: 1.5rem 1.5rem;
     line-height: 1.6rem;
         .logo{
             font-family: 'Shrikhand',sans-serif;

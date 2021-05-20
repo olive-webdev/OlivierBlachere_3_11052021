@@ -20,17 +20,17 @@
 
 @mixin heart {
     @include flex;
-            width: 32px;
-            height: 32px;
+            width: 40px;
+            height: 40px;
             position: absolute;
             top: 0rem;
-            right: 1rem;
+            right: .1rem;
             .fas {
                 transform: scaleX(90%);
                 font-size: 1.5rem;
                 -webkit-text-stroke: .05rem black;
-                color: white;
-                }
+                color: transparent;
+            }
                 
             .fas:hover {
                 background: linear-gradient(180deg,#9356DC, #FF79DA) 0% 50%;
@@ -41,4 +41,31 @@
                 animation-fill-mode: forwards;
                 animation: gradient .6s;
                 }
+}
+
+
+@mixin tab{
+
+    @media screen and (min-width: map-get($breakpoints, pad)){
+        @content;
+    }
+}
+@mixin tabpro{
+
+    @media screen and (min-width: map-get($breakpoints, padpro)){
+        @content;
+    }
+}
+@mixin tabpro1{
+
+    @media screen and (min-width: map-get($breakpoints, padpro1)){
+        @content;
+    }
+}
+
+@mixin max{
+
+    @media screen and (min-width: 1024px){
+        @content;
+    }
 }
