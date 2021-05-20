@@ -125,104 +125,6 @@ a:visited, a:active, a:link {
     opacity: 1;
   }
 }
-@keyframes translate {
-  from {
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-  }
-  to {
-    transform: translateX(-60px);
-    -webkit-transform: translateX(-60px);
-    -moz-transform: translateX(-60px);
-    -ms-transform: translateX(-60px);
-    -o-transform: translateX(-60px);
-  }
-}
-@keyframes resized {
-  from {
-    width: 100%;
-  }
-  to {
-    width: calc(100% - 130px);
-  }
-}
-@keyframes rotatecheck {
-  from {
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-  }
-}
-@keyframes appear {
-  from {
-    transform: translateY(10px);
-    -webkit-transform: translateY(10px);
-    -moz-transform: translateY(10px);
-    -ms-transform: translateY(10px);
-    -o-transform: translateY(10px);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0);
-    -webkit-transform: translate(0);
-    -moz-transform: translate(0);
-    -ms-transform: translate(0);
-    -o-transform: translate(0);
-    opacity: 1;
-  }
-}
-@keyframes translate {
-  from {
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-  }
-  to {
-    transform: translateX(-60px);
-    -webkit-transform: translateX(-60px);
-    -moz-transform: translateX(-60px);
-    -ms-transform: translateX(-60px);
-    -o-transform: translateX(-60px);
-  }
-}
-@keyframes resized {
-  from {
-    width: 100%;
-  }
-  to {
-    width: calc(100% - 130px);
-  }
-}
-@keyframes rotatecheck {
-  from {
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-  }
-}
 @keyframes gradient {
   0% {
     opacity: 0;
@@ -275,7 +177,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: loading 4s;
+  animation: loading 2s;
   animation-fill-mode: forwards;
   visibility: visible;
 }
@@ -437,6 +339,7 @@ h2 {
 }
 .reserve--btn:hover {
   box-shadow: 0px 3px 20px -5px #444444;
+  background-image: linear-gradient(-5deg, #a16be0 30%, #a16be0 0%, #ff93e1);
 }
 
 .photo--palette {
@@ -509,6 +412,7 @@ h2 {
 }
 .menu--btn:hover {
   box-shadow: 0px 3px 20px -5px #444444;
+  background-image: linear-gradient(-5deg, #a16be0 30%, #a16be0 0%, #ff93e1);
 }
 .menu--name {
   width: 100%;
@@ -586,9 +490,10 @@ h2 {
   }
 }
 .menu--card--title {
-  width: calc(100% - 70px);
+  width: 75%;
   margin-left: 0.8rem;
   line-height: 1.5rem;
+  transition: width 0.8s;
 }
 .menu--card--title--bold {
   white-space: nowrap;
@@ -609,6 +514,11 @@ h2 {
   font-weight: 500;
   right: 1.2rem;
   margin-bottom: 0.7rem;
+  transition: transform 0.8s;
+  -webkit-transition: transform 0.8s;
+  -moz-transition: transform 0.8s;
+  -ms-transition: transform 0.8s;
+  -o-transition: transform 0.8s;
 }
 .menu--card--validate {
   display: flex;
@@ -619,6 +529,11 @@ h2 {
   height: 100%;
   right: -60px;
   background-color: #99E2D0;
+  transition: transform 0.8s;
+  -webkit-transition: transform 0.8s;
+  -moz-transition: transform 0.8s;
+  -ms-transition: transform 0.8s;
+  -o-transition: transform 0.8s;
 }
 .menu--card--validate .fas {
   width: 20px;
@@ -634,17 +549,24 @@ h2 {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  transition: transform 1s;
+  -webkit-transition: transform 1s;
+  -moz-transition: transform 1s;
+  -ms-transition: transform 1s;
+  -o-transition: transform 1s;
 }
 .menu--card:hover .menu--card--validate, .menu--card:hover .menu--card--price {
-  animation: translate 0.8s;
-  animation-fill-mode: forwards;
+  transform: translateX(-60px);
 }
 .menu--card:hover .menu--card--title {
-  animation: resized 0.7s;
-  animation-fill-mode: forwards;
+  width: 55%;
 }
 .menu--card:hover .fas {
-  animation: rotatecheck 1s;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
 }
 .menu--card:nth-of-type(3) {
   animation: appear 1s 0.3s;
@@ -773,7 +695,7 @@ h2 {
   left: 2.5rem;
   color: #5d5d5d;
 }
-@media screen and (min-width: 928px) {
+@media screen and (min-width: 599px) {
   .functioning--items--icon {
     left: 1rem;
   }
@@ -782,7 +704,7 @@ h2 {
   position: absolute;
   left: 5rem;
 }
-@media screen and (min-width: 928px) {
+@media screen and (min-width: 599px) {
   .functioning--items p {
     left: 3rem;
   }
@@ -800,7 +722,7 @@ h2 {
   left: -12px;
   color: white;
 }
-@media screen and (min-width: 808px) {
+@media screen and (min-width: 599px) {
   .functioning--items .number {
     top: -12px;
     left: 108px;
