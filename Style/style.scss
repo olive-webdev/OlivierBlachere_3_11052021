@@ -93,37 +93,14 @@
 @keyframes gradient {
     0% {
         opacity: 0;
-        transform: scale(1);
-        -webkit-transform: scale(1);
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        -o-transform: scale(1);
     }
 
     40% {
         opacity: 0.3;
-        transform: scale(1.1);
-        -webkit-transform: scale(1.1);
-        -moz-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        -o-transform: scale(1.1);
-    }
-
-    70% {
-        transform: scale(0.9);
-        -webkit-transform: scale(0.9);
-        -moz-transform: scale(0.9);
-        -ms-transform: scale(0.9);
-        -o-transform: scale(0.9);
     }
 
     to {
         opacity: 1;
-        transform: scale(1);
-        -webkit-transform: scale(1);
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        -o-transform: scale(1);
     }
 }
 
@@ -415,13 +392,14 @@ h2 {
         position: relative;
         justify-content: space-between;
         height: 69px;
-        width: 94vw;
-
+        @include mini{
+            width: 300px;
+        }
         @include max {
             max-width: 961px;
             align-self: center;
         }
-
+        width: 94vw;
         margin-top: .8rem;
         background-color: white;
         border-radius: .8rem;
@@ -507,7 +485,7 @@ h2 {
             }
 
             .menu--card--title {
-                width: 55%;
+                width: calc(75% - 60px);
             }
 
             .fas {
@@ -521,13 +499,10 @@ h2 {
 
     }
 
-    @for $i from 3 through 14 {
-        &--card:nth-of-type(#{$i}) {
-            @if opacity==0 then {
+    @for $i from 1 through 10 {
+        &--card--#{$i} {
                 animation: appear 1s .1s*$i;
                 animation-fill-mode: forwards;
-            }
-
         }
     }
 
@@ -580,6 +555,8 @@ h2 {
             width: 280px;
         }
 
+        ;
+
         @include tab {
             width: 240px;
         }
@@ -591,6 +568,7 @@ h2 {
         }
 
         ;
+
         margin-left: 12px;
         width: 325px;
         height: 72px;
@@ -687,6 +665,7 @@ h2 {
     }
 
     ;
+
     @include flex;
     @include shadow;
     flex-direction: column;

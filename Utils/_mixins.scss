@@ -26,12 +26,17 @@
             top: 0rem;
             right: .1rem;
             .fas {
+                opacity: 1;
+                background-color: white;
                 transform: scaleX(90%);
                 font-size: 1.5rem;
                 -webkit-text-stroke: .05rem black;
                 color: transparent;
-            }
+                -webkit-background-clip: text;
+                background-clip: text;
+}
                 
+
             .fas:hover {
                 background: linear-gradient(180deg,#9356DC, #FF79DA) 0% 50%;
                 -webkit-background-clip: text;
@@ -39,10 +44,11 @@
                 -webkit-text-stroke: 0 black;
                 color: transparent;
                 animation-fill-mode: forwards;
-                animation: gradient .6s;
-                }
+                animation: gradient .5s;
+                -webkit-animation: gradient .5s;
 }
 
+}
 
 @mixin tab{
 
