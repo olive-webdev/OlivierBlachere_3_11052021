@@ -30,6 +30,7 @@
                 -webkit-text-stroke: .05rem black;
                 color: transparent;
                 -webkit-background-clip: text;
+                background-clip: text;
                 -webkit-transform: scaleX(.9);
                 -moz-transform: scaleX(.9);
                 -ms-transform: scaleX(.9);
@@ -40,6 +41,7 @@
             .fas:hover {
                 background: linear-gradient(180deg,#9356DC, #FF79DA) 0% 50%;
                 -webkit-background-clip: text;
+                background-clip: text;
                 -webkit-text-stroke: 0 black;
                 color: transparent;
                 animation-fill-mode: forwards;
