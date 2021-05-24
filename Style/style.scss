@@ -1,210 +1,15 @@
-@import "../utils/_variables.scss";
-@import "../vendors/_minireset.scss";
-@font-face {
-    font-family: "Roboto";
-    src: url("../Vendors/Fonts/Roboto/Roboto-Regular.ttf");
-    font-weight : 400;
-}
-@font-face {
-    font-family: "Roboto";
-    src: url("../Vendors/Fonts/Roboto/Roboto-Black.ttf");
-    font-weight: 900;
-}
-@font-face {
-    font-family: "Roboto";
-    src: url("../Vendors/Fonts/Roboto/Roboto-Bold.ttf");
-    font-weight: 700;
-}
-@font-face {
-    font-family: "Roboto";
-    src: url("../Vendors/Fonts/Roboto/Roboto-Light.ttf");
-    font-weight: 300;
-}
-@font-face {
-    font-family: "Roboto";
-    src: url("../Vendors/Fonts/Roboto/Roboto-Medium.ttf");
-    font-weight: 500;
-}
-@font-face {
-    font-family: "Roboto";
-    src: url("../Vendors/Fonts/Roboto/Roboto-Thin.ttf");
-    font-weight: 100;
-}
-@font-face{
-    font-family: "Shrikhand";
-    src: url("../Vendors/Fonts/Shrikhand/Shrikhand-Regular.ttf");
-}
-@import "../utils/_mixins.scss";
+@import "../utils/variables";
+@import "../vendors/minireset";
+@import "../Utils/keyframes";
+@import "../Utils/fontfamily";
+@import "../utils/mixins";
+@import "../Utils/loader";
+@import "../Pages/header"; 
+@import "../Pages/footer"; 
 
-
-@keyframes loading {
-    85% {
-        opacity: 1;
-    }
-
-    100% {
-        visibility: hidden;
-        opacity: 0;
-    }
-}
-
-@keyframes rotate-primary {
-    0% {
-        transform: rotateX(30deg) rotateY(-50deg) rotateZ(0deg);
-        -webkit-transform: rotateX(30deg) rotateY(-50deg) rotateZ(0deg);
-        -moz-transform: rotateX(30deg) rotateY(-50deg) rotateZ(0deg);
-        -ms-transform: rotateX(30deg) rotateY(-50deg) rotateZ(0deg);
-        -o-transform: rotateX(30deg) rotateY(-50deg) rotateZ(0deg);
-    }
-
-    100% {
-        transform: rotateX(30deg) rotateY(-50deg) rotateZ(360deg);
-        -webkit-transform: rotateX(30deg) rotateY(-50deg) rotateZ(360deg);
-        -moz-transform: rotateX(30deg) rotateY(-50deg) rotateZ(360deg);
-        -ms-transform: rotateX(30deg) rotateY(-50deg) rotateZ(360deg);
-        -o-transform: rotateX(30deg) rotateY(-50deg) rotateZ(360deg);
-    }
-}
-
-@keyframes rotate-secondary {
-    0% {
-        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-        -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-        -moz-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-        -ms-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-        -o-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-    }
-
-    100% {
-        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-        -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-        -moz-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-        -ms-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-        -o-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-    }
-}
-
-@keyframes rotate-tertiary {
-    0% {
-        transform: rotateX(30deg) rotateY(50deg) rotateZ(0deg);
-        -webkit-transform: rotateX(30deg) rotateY(50deg) rotateZ(0deg);
-        -moz-transform: rotateX(30deg) rotateY(50deg) rotateZ(0deg);
-        -ms-transform: rotateX(30deg) rotateY(50deg) rotateZ(0deg);
-        -o-transform: rotateX(30deg) rotateY(50deg) rotateZ(0deg);
-    }
-
-    100% {
-        transform: rotateX(30deg) rotateY(50deg) rotateZ(360deg);
-        -webkit-transform: rotateX(30deg) rotateY(50deg) rotateZ(360deg);
-        -moz-transform: rotateX(30deg) rotateY(50deg) rotateZ(360deg);
-        -ms-transform: rotateX(30deg) rotateY(50deg) rotateZ(360deg);
-        -o-transform: rotateX(30deg) rotateY(50deg) rotateZ(360deg);
-    }
-}
-
-@keyframes appear {
-    from {
-        transform: translateY(10px);
-        -webkit-transform: translateY(10px);
-        -moz-transform: translateY(10px);
-        -ms-transform: translateY(10px);
-        -o-transform: translateY(10px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translate(0);
-        -webkit-transform: translate(0);
-        -moz-transform: translate(0);
-        -ms-transform: translate(0);
-        -o-transform: translate(0);
-        opacity: 1;
-    }
-}
-
-@keyframes gradient {
-    0% {
-        opacity: 0;
-    }
-
-    40% {
-        opacity: 0.3;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.hide {
-    visibility: hidden;
-}
 
 body {
     font-family: 'Roboto', sans-serif;
-}
-
-.wrapper {
-    background-color: #f6f6f6ec;
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    z-index: 10;
-    @include flex;
-    animation: loading 2s;
-    animation-fill-mode: forwards;
-    visibility: visible;
-}
-
-.loader {
-    position: absolute;
-    top: calc(50% - 74px);
-    left: calc(50% - 64px);
-    width: 128px;
-    height: 128px;
-}
-
-.arc {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    -o-border-radius: 100%;
-}
-
-.arc.one {
-    left: 0;
-    top: 0;
-    animation: rotate-primary 1s linear infinite;
-    border-bottom: 8px solid $primary;
-    -webkit-animation: rotate-primary 1s linear infinite;
-}
-
-.arc.two {
-    right: 0;
-    top: 0;
-    animation: rotate-secondary 1s linear infinite;
-    border-right: 8px solid $secondary;
-    -webkit-animation: rotate-secondary 1s linear infinite;
-}
-
-.arc.three {
-    right: 0;
-    bottom: 0;
-    animation: rotate-tertiary 1s linear infinite;
-    border-top: 8px solid $tertiary;
-    -webkit-animation: rotate-tertiary 1s linear infinite;
-}
-
-.loading {
-    color: rgb(0, 0, 0);
-    font-size: 24px;
-    position: absolute;
-    top: calc(50% + 94px);
-    letter-spacing: .5rem;
 }
 
 h2 {
@@ -221,30 +26,9 @@ h2 {
     box-shadow: 0px 0px 22px -2px rgba(0, 0, 0, 0.59);
 }
 
-.header {
-    @include max {
-        width: 1024px;
-        margin: 0 auto;
-    }
-
-    height: 63px;
-    padding-top: 0.4rem;
-    @include flex;
-    font-family: 'Shrikhand',
-    cursive;
-    font-size: 1.9rem;
-    position: relative;
-    text-align: center;
-
-    .fas {
-        font-size: 1.2rem;
-        line-height: 63px;
-        position: absolute;
-        top: 0;
-        left: 1.4rem;
-
-    }
-}
+/* ========================================================================== */
+/* Localisation */ 
+/* ========================================================================== */
 
 .localization {
     @include max {
@@ -263,6 +47,10 @@ h2 {
         left: -1.2rem;
     }
 }
+
+/* ========================================================================== */
+/* Réservez le menu qui vous convient */
+/* ========================================================================== */
 
 .reserve {
     @include max {
@@ -316,8 +104,236 @@ h2 {
     }
 }
 
-.photo {
+/* ========================================================================== */
+/* Fonctionnement */
+/* ========================================================================== */
 
+.functioning {
+    @include max {
+        width: 1024px;
+        margin: 0 auto;
+    }
+
+    @include flex;
+    flex-direction: column;
+
+    @include tab {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center
+    }
+
+    ;
+
+    justify-content:space-between;
+    padding-top: 3rem;
+    padding-bottom: 4.3rem;
+    gap: 1.6rem;
+
+    &--title {
+        overflow: hidden;
+        position: relative;
+        width: 90%;
+        @include flex;
+        justify-content: left;
+        margin-bottom: .2rem;
+    }
+
+    &--items {
+        @include mini {
+            width: 280px;
+        }
+
+        ;
+
+        @include tab {
+            width: 240px;
+        }
+
+        ;
+
+        @include tabpro1 {
+            margin-left: 0;
+        }
+
+        ;
+
+        margin-left: 12px;
+        width: 325px;
+        height: 72px;
+        background-color: $grey;
+        @include flex;
+        @include shadow(20%);
+        border-radius: 1.5rem;
+        font-size: 1rem;
+        position: relative;
+
+        &--icon {
+            @include tab {
+                left: 1rem;
+            }
+
+            ;
+            position: absolute;
+            left: 2.5rem;
+            color: darken($grey, 60%);
+        }
+
+        p {
+            @include tab {
+                left: 3rem;
+            }
+
+            ;
+            position: absolute;
+            left: 5rem;
+        }
+
+        .number {
+            @include tab {
+                top: -12px;
+                left: 108px
+            }
+
+            ;
+
+            position: absolute;
+            @include flex;
+            font-size: .8rem;
+            width: 24px;
+            height: 24px;
+            background-color: $primary;
+            border-radius: 50%;
+            left: -12px;
+            color:white;
+        }
+    }
+
+    @include functioning--itemshover;
+}
+
+/* ========================================================================== */
+/* Restaurants */
+/* ========================================================================== */
+
+.restaurants {
+    @include max {
+        width: 1024px;
+        margin: 0 auto;
+    }
+
+    @include flex;
+    background-color: $grey;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 3.2rem;
+    padding-bottom: 4rem;
+
+    :nth-child(3) {
+        img {
+            position: absolute;
+            bottom: -15px;
+        }
+    }
+
+    &--title {
+        @include flex;
+        width: 90%;
+        justify-content: left;
+    }
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.restaurants--card {
+    @include mini {
+        width: 290px;
+    }
+
+    ;
+
+    @include tabpro {
+        width: 420px;
+        height: calc(420px/1.33);
+    }
+
+    ;
+
+    @include flex;
+    @include shadow;
+    flex-direction: column;
+    width: 335px;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 1rem;
+
+    img {
+        position: absolute;
+        bottom: 75px;
+    }
+
+    &--new {
+        position: absolute;
+        display: inline;
+        background-color: $tertiary;
+        padding: .4rem .7rem;
+        right: .8rem;
+        top: .8rem;
+        font-size: .9rem;
+        font-weight: 500;
+        color: darken($tertiary, 40);
+        border-radius: .1rem;
+    }
+
+    &--title {
+        background-color: white;
+        @include flex;
+        width: 100%;
+        height: 75px;
+        padding: 1rem 1rem;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 0;
+
+        &--nameloca {
+            h3 {
+                font-weight: 700;
+                font-size: 1.1rem;
+            }
+
+            h4 {
+                margin-top: .2rem;
+                font-weight: 300;
+                font-size: 1rem;
+            }
+        }
+
+        &--heart {
+            margin-top: 1rem;
+            margin-right: 1rem;
+            @include heart;
+        }
+    }
+}
+
+.restaurants--card:hover {
+    @include shadow(30%);
+}
+
+/* ========================================================================== */
+/* Page de menu */
+/* ========================================================================== */
+
+/* -------------------------------------------------------------------------- */
+/* boucle pour background */
+/* -------------------------------------------------------------------------- */
+
+.photo {
     @each $name,
     $image in $restaurant {
         &--#{$name} {
@@ -529,6 +545,10 @@ h2 {
 
     }
 
+/* ========================================================================== */
+/* boucle pour apparition des items du menu */
+/* ========================================================================== */
+
     @for $i from 1 through 10 {
         &--card--#{$i} {
                 animation: appear 1s .1s*$i;
@@ -549,241 +569,3 @@ h2 {
     }
 }
 
-.functioning {
-    @include max {
-        width: 1024px;
-        margin: 0 auto;
-    }
-
-    @include flex;
-    flex-direction: column;
-
-    @include tab {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center
-    }
-
-    ;
-
-    justify-content:space-between;
-    padding-top: 3rem;
-    padding-bottom: 4.3rem;
-    gap: 1.6rem;
-
-    &--title {
-        overflow: hidden;
-        position: relative;
-        width: 90%;
-        @include flex;
-        justify-content: left;
-        margin-bottom: .2rem;
-    }
-
-    &--items {
-        @include mini {
-            width: 280px;
-        }
-
-        ;
-
-        @include tab {
-            width: 240px;
-        }
-
-        ;
-
-        @include tabpro1 {
-            margin-left: 0;
-        }
-
-        ;
-
-        margin-left: 12px;
-        width: 325px;
-        height: 72px;
-        background-color: $grey;
-        @include flex;
-        @include shadow(20%);
-        border-radius: 1.5rem;
-        font-size: 1rem;
-        position: relative;
-
-        &--icon {
-            @include tab {
-                left: 1rem;
-            }
-
-            ;
-            position: absolute;
-            left: 2.5rem;
-            color: darken($grey, 60%);
-        }
-
-        p {
-            @include tab {
-                left: 3rem;
-            }
-
-            ;
-            position: absolute;
-            left: 5rem;
-        }
-
-        .number {
-            @include tab {
-                top: -12px;
-                left: 108px
-            }
-
-            ;
-
-            position: absolute;
-            @include flex;
-            font-size: .8rem;
-            width: 24px;
-            height: 24px;
-            background-color: $primary;
-            border-radius: 50%;
-            left: -12px;
-            color:white;
-        }
-    }
-
-    @include functioning--itemshover;
-}
-
-.restaurants {
-    @include max {
-        width: 1024px;
-        margin: 0 auto;
-    }
-
-    @include flex;
-    background-color: $grey;
-    flex-wrap: wrap;
-    justify-content:center;
-    align-items: center;
-    gap: 1.5rem;
-    padding-top: 3.2rem;
-    padding-bottom: 4rem;
-
-    :nth-child(3) {
-        img {
-            position: absolute;
-            bottom: -15px;
-        }
-    }
-
-    &--title {
-        @include flex;
-        width: 90%;
-        justify-content: left;
-    }
-}
-
-.restaurants--card {
-    @include mini {
-        width: 290px;
-    }
-
-    ;
-
-    @include tabpro {
-        width: 420px;
-        height: calc(420px/1.33);
-    }
-
-    ;
-
-    @include flex;
-    @include shadow;
-    flex-direction: column;
-    width: 335px;
-    height: 250px;
-    overflow: hidden;
-    position: relative;
-    border-radius: 1rem;
-
-    img {
-        position: absolute;
-        bottom: 75px;
-    }
-
-    &--new {
-        position: absolute;
-        display: inline;
-        background-color: $tertiary;
-        padding: .4rem .7rem;
-        right: .8rem;
-        top: .8rem;
-        font-size: .9rem;
-        font-weight: 500;
-        color: darken($tertiary, 40);
-        border-radius: .1rem;
-    }
-
-    &--title {
-        background-color: white;
-        @include flex;
-        width: 100%;
-        height: 75px;
-        padding: 1rem 1rem;
-        justify-content: space-between;
-        position: absolute;
-        bottom: 0;
-
-        &--nameloca {
-            h3 {
-                font-weight: 700;
-                font-size: 1.1rem;
-            }
-
-            h4 {
-                margin-top: .2rem;
-                font-weight: 300;
-                font-size: 1rem;
-            }
-        }
-
-        &--heart {
-            margin-top: 1rem;
-            margin-right: 1rem;
-            @include heart;
-        }
-    }
-}
-
-.restaurants--card:hover {
-    @include shadow(30%);
-}
-
-footer {
-    @include max {
-        width: 1024px;
-        margin: 0 auto;
-        padding: 1.5rem 90px;
-    }
-
-    background-color: darken($grey, 75%);
-    height: 200px;
-    color: white;
-    padding: 1.5rem 1.5rem;
-    line-height: 1.6rem;
-
-    .logo {
-        font-family: 'Shrikhand', sans-serif;
-        font-size: 1rem;
-        margin-bottom: .9rem;
-    }
-
-    .fas {
-        font-size: .8rem;
-        width: 1rem;
-        margin-right: .5rem;
-    }
-
-    .contact>a {
-        color: white;
-    }
-}

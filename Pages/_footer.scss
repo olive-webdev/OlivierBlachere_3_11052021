@@ -1,0 +1,30 @@
+footer {
+    @include max {
+        width: 1024px;
+        margin: 0 auto;
+        padding: 1.5rem 90px;
+    }
+
+    background-color: darken($grey, 75%);
+    height: 200px;
+    color: white;
+    padding: 1.5rem 1.5rem;
+    line-height: 1.6rem;
+
+    .logo {
+        font-family: 'Shrikhand', sans-serif;
+        font-size: 1rem;
+        margin-bottom: .9rem;
+    }
+
+    .fas {
+        font-size: .8rem;
+        width: 1rem;
+        margin-right: .5rem;
+    }
+
+    .contact a {
+        font-style: normal;
+        color: white;
+    }
+}
