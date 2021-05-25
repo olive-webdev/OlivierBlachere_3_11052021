@@ -355,11 +355,6 @@ h2 {
         height: 50px;
         background-color: $grey;
         border-radius: 40px 40px 0 0;
-        -webkit-border-radius: 40px 40px 0 0;
-        -moz-border-radius: 40px 40px 0 0;
-        -ms-border-radius: 40px 40px 0 0;
-        -o-border-radius: 40px 40px 0 0;
-        position: relative;
         bottom: 50px;
     }
 }
@@ -447,10 +442,6 @@ h2 {
         margin-top: .8rem;
         background-color: white;
         border-radius: .8rem;
-        -webkit-border-radius: .8rem;
-        -moz-border-radius: .8rem;
-        -ms-border-radius: .8rem;
-        -o-border-radius: .8rem;
         overflow: hidden;
 
         &--title {
@@ -509,10 +500,6 @@ h2 {
                 border-radius: 50%;
                 @include flex;
                 color: $tertiary;
-                -webkit-border-radius: 50%;
-                -moz-border-radius: 50%;
-                -ms-border-radius: 50%;
-                -o-border-radius: 50%;
                 transition: transform 1s;
                 -webkit-transition: transform 1s;
                 -moz-transition: transform 1s;
