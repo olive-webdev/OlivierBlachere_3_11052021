@@ -4,8 +4,8 @@
 @import "../Utils/fontfamily";
 @import "../utils/mixins";
 @import "../Utils/loader";
-@import "../Pages/Scss/header"; 
-@import "../Pages/Scss/footer"; 
+@import "../Layout/header"; 
+@import "../Layout/footer"; 
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -352,6 +352,7 @@ h2 {
     position: relative;
 
     &--header {
+        position: relative;
         height: 50px;
         background-color: $grey;
         border-radius: 40px 40px 0 0;

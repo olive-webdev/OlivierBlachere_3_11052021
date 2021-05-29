@@ -54,66 +54,34 @@ a:visited, a:active, a:link {
 @keyframes rotate-primary {
   0% {
     transform: rotateX(30deg) rotateY(-50deg) rotateZ(0deg);
-    -webkit-transform: rotateX(30deg) rotateY(-50deg) rotateZ(0deg);
-    -moz-transform: rotateX(30deg) rotateY(-50deg) rotateZ(0deg);
-    -ms-transform: rotateX(30deg) rotateY(-50deg) rotateZ(0deg);
-    -o-transform: rotateX(30deg) rotateY(-50deg) rotateZ(0deg);
   }
   100% {
     transform: rotateX(30deg) rotateY(-50deg) rotateZ(360deg);
-    -webkit-transform: rotateX(30deg) rotateY(-50deg) rotateZ(360deg);
-    -moz-transform: rotateX(30deg) rotateY(-50deg) rotateZ(360deg);
-    -ms-transform: rotateX(30deg) rotateY(-50deg) rotateZ(360deg);
-    -o-transform: rotateX(30deg) rotateY(-50deg) rotateZ(360deg);
   }
 }
 @keyframes rotate-secondary {
   0% {
     transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-    -moz-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-    -ms-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-    -o-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
   }
   100% {
     transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-    -moz-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-    -ms-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-    -o-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
   }
 }
 @keyframes rotate-tertiary {
   0% {
     transform: rotateX(30deg) rotateY(50deg) rotateZ(0deg);
-    -webkit-transform: rotateX(30deg) rotateY(50deg) rotateZ(0deg);
-    -moz-transform: rotateX(30deg) rotateY(50deg) rotateZ(0deg);
-    -ms-transform: rotateX(30deg) rotateY(50deg) rotateZ(0deg);
-    -o-transform: rotateX(30deg) rotateY(50deg) rotateZ(0deg);
   }
   100% {
     transform: rotateX(30deg) rotateY(50deg) rotateZ(360deg);
-    -webkit-transform: rotateX(30deg) rotateY(50deg) rotateZ(360deg);
-    -moz-transform: rotateX(30deg) rotateY(50deg) rotateZ(360deg);
-    -ms-transform: rotateX(30deg) rotateY(50deg) rotateZ(360deg);
-    -o-transform: rotateX(30deg) rotateY(50deg) rotateZ(360deg);
   }
 }
 @keyframes appear {
   from {
     transform: translateY(10px);
-    -webkit-transform: translateY(10px);
-    -moz-transform: translateY(10px);
-    -ms-transform: translateY(10px);
-    -o-transform: translateY(10px);
     opacity: 0;
   }
   to {
     transform: translate(0);
-    -webkit-transform: translate(0);
-    -moz-transform: translate(0);
-    -ms-transform: translate(0);
-    -o-transform: translate(0);
     opacity: 1;
   }
 }
@@ -189,10 +157,6 @@ a:visited, a:active, a:link {
   width: 100%;
   height: 100%;
   border-radius: 100%;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  -ms-border-radius: 100%;
-  -o-border-radius: 100%;
 }
 
 .arc.one {
@@ -200,7 +164,6 @@ a:visited, a:active, a:link {
   top: 0;
   animation: rotate-primary 1s linear infinite;
   border-bottom: 8px solid #9356DC;
-  -webkit-animation: rotate-primary 1s linear infinite;
 }
 
 .arc.two {
@@ -208,7 +171,6 @@ a:visited, a:active, a:link {
   top: 0;
   animation: rotate-secondary 1s linear infinite;
   border-right: 8px solid #FF79DA;
-  -webkit-animation: rotate-secondary 1s linear infinite;
 }
 
 .arc.three {
@@ -216,7 +178,6 @@ a:visited, a:active, a:link {
   bottom: 0;
   animation: rotate-tertiary 1s linear infinite;
   border-top: 8px solid #99E2D0;
-  -webkit-animation: rotate-tertiary 1s linear infinite;
 }
 
 .loading {
@@ -601,21 +562,14 @@ h2 {
   -webkit-text-stroke: 0.05rem black;
   color: transparent;
   -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-transform: scaleX(0.9);
-  -moz-transform: scaleX(0.9);
-  -ms-transform: scaleX(0.9);
-  -o-transform: scaleX(0.9);
 }
 .restaurants--card--title--heart .fas:hover {
   background: linear-gradient(180deg, #9356DC, #FF79DA) 0% 50%;
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-stroke: 0 black;
   color: transparent;
   animation-fill-mode: forwards;
   animation: gradient 0.5s;
-  -webkit-animation: gradient 0.5s;
 }
 
 .restaurants--card:hover {
@@ -655,14 +609,10 @@ h2 {
   position: relative;
 }
 .photo--header {
+  position: relative;
   height: 50px;
   background-color: #f6f6f6;
   border-radius: 40px 40px 0 0;
-  -webkit-border-radius: 40px 40px 0 0;
-  -moz-border-radius: 40px 40px 0 0;
-  -ms-border-radius: 40px 40px 0 0;
-  -o-border-radius: 40px 40px 0 0;
-  position: relative;
   bottom: 50px;
 }
 
@@ -746,21 +696,14 @@ h2 {
   -webkit-text-stroke: 0.05rem black;
   color: transparent;
   -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-transform: scaleX(0.9);
-  -moz-transform: scaleX(0.9);
-  -ms-transform: scaleX(0.9);
-  -o-transform: scaleX(0.9);
 }
 .menu--name--heart .fas:hover {
   background: linear-gradient(180deg, #9356DC, #FF79DA) 0% 50%;
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-stroke: 0 black;
   color: transparent;
   animation-fill-mode: forwards;
   animation: gradient 0.5s;
-  -webkit-animation: gradient 0.5s;
 }
 .menu--card {
   opacity: 0;
@@ -775,10 +718,6 @@ h2 {
   margin-top: 0.8rem;
   background-color: white;
   border-radius: 0.8rem;
-  -webkit-border-radius: 0.8rem;
-  -moz-border-radius: 0.8rem;
-  -ms-border-radius: 0.8rem;
-  -o-border-radius: 0.8rem;
   overflow: hidden;
 }
 @media screen and (max-width: 374px) {
@@ -848,10 +787,6 @@ h2 {
   justify-content: center;
   align-items: center;
   color: #99E2D0;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   transition: transform 1s;
   -webkit-transition: transform 1s;
   -moz-transition: transform 1s;

@@ -30,7 +30,6 @@
     top: 0;
     animation: rotate-primary 1s linear infinite;
     border-bottom: 8px solid $primary;
-    -webkit-animation: rotate-primary 1s linear infinite;
 }
 
 .arc.two {
@@ -38,7 +37,6 @@
     top: 0;
     animation: rotate-secondary 1s linear infinite;
     border-right: 8px solid $secondary;
-    -webkit-animation: rotate-secondary 1s linear infinite;
 }
 
 .arc.three {
@@ -46,7 +44,6 @@
     bottom: 0;
     animation: rotate-tertiary 1s linear infinite;
     border-top: 8px solid $tertiary;
-    -webkit-animation: rotate-tertiary 1s linear infinite;
 }
 
 .loading {
